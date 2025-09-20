@@ -2,13 +2,24 @@
 
 declare(strict_types=1);
 
+// Activer l'affichage des erreurs en production (temporaire pour debug)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+
+// Vérifier que l'autoload existe
+$autoloadPath = __DIR__ . '/../vendor/autoload.php';
+if (!file_exists($autoloadPath)) {
+    die('Erreur: Composer autoload non trouvé. Exécutez "composer install".');
+}
+
+require $autoloadPath;
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 use PhpOptimizer\Controllers\UploadController;
 use PhpOptimizer\Controllers\AnalysisController;
-
-require __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 try {
@@ -42,6 +53,16 @@ $app->addErrorMiddleware(true, true, true);
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write(file_get_contents(__DIR__ . '/index.html'));
     return $response->withHeader('Content-Type', 'text/html');
+});
+
+$app->get('/test', function (Request $request, Response $response) {
+    $response->getBody()->write(json_encode([
+        'status' => 'OK',
+        'message' => 'API fonctionne',
+        'timestamp' => date('c'),
+        'php_version' => PHP_VERSION
+    ]));
+    return $response->withHeader('Content-Type', 'application/json');
 });
 
 $app->post('/upload', function (Request $request, Response $response) {

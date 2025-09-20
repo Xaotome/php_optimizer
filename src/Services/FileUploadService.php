@@ -14,7 +14,7 @@ class FileUploadService
 
     public function __construct()
     {
-        $this->uploadDirectory = __DIR__ . '/../../storage/uploads/';
+        $this->uploadDirectory = dirname(__DIR__, 2) . '/storage/uploads/';
         $this->ensureUploadDirectoryExists();
     }
 

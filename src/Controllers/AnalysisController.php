@@ -17,8 +17,13 @@ class AnalysisController
 
     public function __construct()
     {
-        $this->analysisService = new AnalysisService();
-        $this->uploadService = new FileUploadService();
+        try {
+            $this->analysisService = new AnalysisService();
+            $this->uploadService = new FileUploadService();
+        } catch (\Exception $e) {
+            error_log("Erreur construction AnalysisController: " . $e->getMessage());
+            throw $e;
+        }
     }
 
     public function analyze(Request $request, Response $response): Response

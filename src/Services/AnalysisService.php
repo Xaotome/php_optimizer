@@ -23,7 +23,7 @@ class AnalysisService
         $this->phpstanAnalyzer = new PhpStanAnalyzer();
         $this->csFixerAnalyzer = new CsFixerAnalyzer();
         $this->codeSnifferAnalyzer = new CodeSnifferAnalyzer();
-        $this->reportsDirectory = __DIR__ . '/../../storage/reports/';
+        $this->reportsDirectory = dirname(__DIR__, 2) . '/storage/reports/';
         $this->ensureReportsDirectoryExists();
     }
 
