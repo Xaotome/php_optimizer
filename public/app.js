@@ -7,9 +7,25 @@ class PhpOptimizerApp {
             warning: true,
             info: true
         };
+        
+        // Détecter le chemin de base automatiquement
+        this.basePath = this.detectBasePath();
+        
         this.initializeEventListeners();
         // Setup des filtres dès le début
         this.setupFilters();
+    }
+
+    detectBasePath() {
+        const path = window.location.pathname;
+        if (path.includes('/php_optimizer/')) {
+            return '/php_optimizer';
+        }
+        return '';
+    }
+
+    buildApiUrl(endpoint) {
+        return this.basePath + endpoint;
     }
 
     initializeEventListeners() {
@@ -111,7 +127,7 @@ class PhpOptimizerApp {
                 formData.append('files[]', file);
             });
             
-            const response = await fetch('/analyze', {
+            const response = await fetch(this.buildApiUrl('/analyze'), {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -140,8 +156,13 @@ class PhpOptimizerApp {
                 this.showError(result.message || 'Erreur inconnue');
             }
         } catch (error) {
+            // Afficher le bouton de débogage en cas d'erreur
+            document.getElementById('debugBtn').style.display = 'block';
+            
             if (error.name === 'TypeError' && error.message.includes('fetch')) {
-                this.showError('Impossible de se connecter au serveur. Vérifiez que vous utilisez http://localhost:8001 et que le serveur fonctionne.');
+                this.showError('Impossible de se connecter au serveur. Vérifiez votre connexion internet et réessayez.');
+            } else if (error.message.includes('404')) {
+                this.showError('Service d\'analyse temporairement indisponible. URL utilisée: ' + this.buildApiUrl('/analyze'));
             } else {
                 this.showError('Erreur lors de l\'analyse: ' + error.message);
             }
@@ -294,6 +315,23 @@ class PhpOptimizerApp {
         `;
         
         document.getElementById('results').classList.remove('hidden');
+    }
+
+    showDebugInfo() {
+        const debugInfo = `
+            <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 mb-4">
+                <h4 class="font-semibold mb-2">Informations de débogage :</h4>
+                <ul class="text-sm space-y-1">
+                    <li><strong>URL actuelle :</strong> ${window.location.href}</li>
+                    <li><strong>Chemin de base détecté :</strong> ${this.basePath || '(racine)'}</li>
+                    <li><strong>URL d'API :</strong> ${this.buildApiUrl('/analyze')}</li>
+                    <li><strong>User Agent :</strong> ${navigator.userAgent.substring(0, 50)}...</li>
+                </ul>
+            </div>
+        `;
+        
+        const resultsContainer = document.getElementById('analysisResults');
+        resultsContainer.innerHTML = debugInfo + resultsContainer.innerHTML;
     }
 
     calculateTotalStats(files) {

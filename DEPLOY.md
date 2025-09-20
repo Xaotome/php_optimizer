@@ -59,13 +59,23 @@ L'application sera accessible à :
 4. ✅ Filtres interactifs fonctionnent
 5. ✅ Pas d'erreur 404
 
-### 7. Debugging
+### 7. Tests et Debugging
 
-Si erreur 404 persiste :
+**Page de test des routes :**
+- Accéder à : `https://thmspcrx.dev/php_optimizer/test-routes.html`
+- Cette page teste automatiquement toutes les routes
+
+**En cas d'erreur 404 :**
 1. Vérifier que mod_rewrite est activé
-2. Vérifier les permissions des fichiers
+2. Vérifier les permissions des fichiers  
 3. Vérifier les logs Apache
 4. Tester l'URL directe : `/php_optimizer/public/`
+5. Utiliser le bouton "Afficher les informations de débogage" dans l'app
+
+**Détection automatique du chemin :**
+- ✅ JavaScript détecte automatiquement `/php_optimizer/`
+- ✅ Appels API adaptés dynamiquement
+- ✅ Fonctionne en local ET en production
 
 ### 8. Variables importantes
 

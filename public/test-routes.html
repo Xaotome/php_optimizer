@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test des Routes - PHP Optimizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; }
+        .info { background-color: #d1ecf1; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Test des Routes API</h1>
+    
+    <div id="results"></div>
+    
+    <script>
+        class RoutesTester {
+            constructor() {
+                this.basePath = this.detectBasePath();
+                this.results = document.getElementById('results');
+                this.runTests();
+            }
+            
+            detectBasePath() {
+                const path = window.location.pathname;
+                if (path.includes('/php_optimizer/')) {
+                    return '/php_optimizer';
+                }
+                return '';
+            }
+            
+            addResult(message, type) {
+                const div = document.createElement('div');
+                div.className = `test-result ${type}`;
+                div.innerHTML = message;
+                this.results.appendChild(div);
+            }
+            
+            async runTests() {
+                this.addResult(`🔍 Démarrage des tests...`, 'info');
+                this.addResult(`📍 URL de base: ${window.location.origin}`, 'info');
+                this.addResult(`📂 Chemin de base détecté: ${this.basePath || '(racine)'}`, 'info');
+                
+                // Test 1: Page d'accueil
+                await this.testRoute('/', 'Page d\'accueil');
+                
+                // Test 2: Route analyze (GET - devrait retourner 405 Method Not Allowed)
+                await this.testRoute('/analyze', 'Route analyze (GET)', 'GET', true);
+                
+                // Test 3: Test des fichiers statiques
+                await this.testStaticFile('/app.js', 'Fichier app.js');
+                
+                this.addResult(`✅ Tests terminés`, 'info');
+            }
+            
+            async testRoute(endpoint, description, method = 'GET', expectError = false) {
+                try {
+                    const url = this.basePath + endpoint;
+                    this.addResult(`🧪 Test: ${description} - ${method} ${url}`, 'info');
+                    
+                    const response = await fetch(url, { method });
+                    
+                    if (expectError) {
+                        if (response.status === 405) {
+                            this.addResult(`✅ ${description}: 405 Method Not Allowed (attendu)`, 'success');
+                        } else {
+                            this.addResult(`⚠️ ${description}: Status ${response.status} (405 attendu)`, 'error');
+                        }
+                    } else {
+                        if (response.ok) {
+                            this.addResult(`✅ ${description}: OK (${response.status})`, 'success');
+                        } else {
+                            this.addResult(`❌ ${description}: Erreur ${response.status}`, 'error');
+                        }
+                    }
+                } catch (error) {
+                    this.addResult(`❌ ${description}: ${error.message}`, 'error');
+                }
+            }
+            
+            async testStaticFile(file, description) {
+                try {
+                    const url = this.basePath + file;
+                    this.addResult(`🧪 Test fichier: ${description} - ${url}`, 'info');
+                    
+                    const response = await fetch(url);
+                    
+                    if (response.ok) {
+                        this.addResult(`✅ ${description}: Accessible`, 'success');
+                    } else {
+                        this.addResult(`❌ ${description}: Erreur ${response.status}`, 'error');
+                    }
+                } catch (error) {
+                    this.addResult(`❌ ${description}: ${error.message}`, 'error');
+                }
+            }
+        }
+        
+        // Lancer les tests au chargement de la page
+        window.addEventListener('DOMContentLoaded', () => {
+            new RoutesTester();
+        });
+    </script>
+</body>
+</html>
