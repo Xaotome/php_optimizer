@@ -53,7 +53,7 @@ try {
         exit;
     }
 
-    $expectedHash = '$2y$10$L.D3.YY4leIZHCIw1xIiouHSwhJV4fosS4.RxsjdQpxnWizXIh.3e';
+    $expectedHash = '$2y$10$fHW5MJBXnbNi1TP.TqMe6.15oyYN1y0/owLUM5mp1HE3AYiJ/aksO';
     
     if (!password_verify($data['password'], $expectedHash)) {
         http_response_code(401);

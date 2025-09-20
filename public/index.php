@@ -262,7 +262,7 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
         }
         
-        $expectedHash = '$2y$10$L.D3.YY4leIZHCIw1xIiouHSwhJV4fosS4.RxsjdQpxnWizXIh.3e';
+        $expectedHash = '$2y$10$fHW5MJBXnbNi1TP.TqMe6.15oyYN1y0/owLUM5mp1HE3AYiJ/aksO';
         
         if (!password_verify($data['password'], $expectedHash)) {
             $response->getBody()->write(json_encode([
