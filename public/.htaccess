@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Handle Angular and other requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Optional: Set base path for subdirectory
+SetEnv SCRIPT_NAME /php_optimizer

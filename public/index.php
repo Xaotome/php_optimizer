@@ -19,6 +19,15 @@ try {
 
 $app = AppFactory::create();
 
+// Set base path for subdirectory deployment
+$basePath = '';
+if (isset($_SERVER['SCRIPT_NAME']) && strpos($_SERVER['SCRIPT_NAME'], '/php_optimizer') !== false) {
+    $basePath = '/php_optimizer';
+}
+if (!empty($basePath)) {
+    $app->setBasePath($basePath);
+}
+
 // Add CORS middleware
 $app->add(function (Request $request, $handler) {
     $response = $handler->handle($request);
