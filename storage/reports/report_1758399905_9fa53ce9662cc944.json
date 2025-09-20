@@ -1,0 +1,3349 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "index.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/src\/Services\/..\/..\/storage\/uploads\/index_1758399905_72e11c74c4e47d23.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "warning",
+                    "message": "Possible effet de bord détecté (output)",
+                    "line": 1,
+                    "rule": "PSR-1.side_effects",
+                    "suggestion": "Évitez les sorties directes dans les fichiers de classe"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 1,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 2,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 3,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 4,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 5,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 6,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 7,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 8,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 9,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 10,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 11,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 12,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 13,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 14,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 15,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 16,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 17,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 18,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 19,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 20,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 21,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 22,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (124 caractères)",
+                    "line": 23,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 23,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 24,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 25,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 26,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 27,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 28,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 29,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 30,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 31,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 32,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 33,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 34,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 35,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 36,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 37,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 38,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 39,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 40,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 41,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 42,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 43,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 44,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 45,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 46,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 47,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 48,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 49,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 50,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 51,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 52,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 53,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 54,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 55,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 56,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 57,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 58,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 59,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 60,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 61,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 62,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 63,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 64,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 65,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 66,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 67,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 68,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 69,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 70,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 71,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 72,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 73,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 74,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 75,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 76,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 77,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 78,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 79,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 80,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 81,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 82,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 83,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 84,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 85,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 86,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 87,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 88,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 89,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 90,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 91,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 92,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 93,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 94,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 95,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 96,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 97,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 98,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 99,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 100,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 101,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 102,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 103,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 104,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 105,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 106,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 107,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 108,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 109,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 110,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 111,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 112,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 113,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 114,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 115,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 116,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 117,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 118,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 119,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 120,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 121,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 122,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 123,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 124,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 125,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 126,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 127,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 128,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 129,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 130,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 131,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 132,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 133,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 134,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 135,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 136,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 137,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 138,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 139,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 140,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 141,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 142,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 143,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 144,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 145,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 146,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 147,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 148,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 149,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 150,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 151,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 152,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 153,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 154,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 155,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 156,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 157,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 158,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 159,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 160,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 161,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 162,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 163,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 164,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 165,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 166,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 167,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 168,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 169,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 170,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 171,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 172,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 173,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 174,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 175,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 176,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 177,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 178,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 179,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 180,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 181,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 182,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 183,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 184,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 185,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 186,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 187,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 188,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 189,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 190,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 191,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 192,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 193,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 194,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 195,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 196,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 197,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 198,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 199,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 200,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 201,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 202,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 203,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 204,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 205,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 206,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 207,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 208,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 209,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 210,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 211,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 212,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 213,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 214,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 215,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 216,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 217,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 218,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 219,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 220,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 221,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 222,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 223,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 224,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 225,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 226,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 227,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 228,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 229,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 230,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 231,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 232,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 233,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 234,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 235,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 236,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 237,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 238,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 239,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 240,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 241,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 242,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 243,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 244,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 245,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 246,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 247,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 248,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 249,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 250,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 251,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 252,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 253,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 254,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 255,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 256,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 257,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 258,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 259,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 260,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 261,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 262,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 263,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 264,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 265,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 266,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 267,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 268,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 269,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 270,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 271,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 272,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 273,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 274,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 275,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 276,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 277,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 278,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 279,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 280,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 281,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 282,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 283,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 284,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 285,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (130 caractères)",
+                    "line": 286,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 286,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 287,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 288,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 289,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 290,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 291,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 292,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 293,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 294,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 295,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 296,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 297,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 298,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 299,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 300,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 301,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 302,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 303,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 304,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 305,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 306,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 307,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 308,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 309,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 310,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 311,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 312,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 313,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 314,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 315,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 316,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 317,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 318,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 319,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 320,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 321,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 322,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 323,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 324,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (136 caractères)",
+                    "line": 325,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 325,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (156 caractères)",
+                    "line": 326,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 326,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (149 caractères)",
+                    "line": 327,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 327,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (132 caractères)",
+                    "line": 328,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 328,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 329,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 330,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 331,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 332,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 333,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 334,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 335,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 336,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 337,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 338,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 339,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 340,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 341,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 342,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 343,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 344,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 345,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 346,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 347,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 348,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 349,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 350,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 351,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 352,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 353,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 354,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 355,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 356,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 357,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 358,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 359,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 360,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 361,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 362,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 363,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 364,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 365,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 366,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 367,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 368,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 369,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 370,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 371,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 372,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 373,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 374,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 375,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 376,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 377,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 378,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 379,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 380,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 381,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 382,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 383,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 384,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 385,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 386,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 387,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 388,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 389,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 390,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 391,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 392,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 393,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 394,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 395,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 396,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 397,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 398,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 399,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 400,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 401,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 402,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 403,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 404,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 405,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 406,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 407,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 408,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 409,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 410,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 411,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 412,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 413,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 414,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 415,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 416,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 417,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 418,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 419,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 420,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 421,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 422,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 423,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 424,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 425,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 426,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 427,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 428,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 429,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 430,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 431,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 432,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 433,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 434,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 435,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 436,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 437,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 438,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 439,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 440,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 441,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 442,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 443,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 444,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 445,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 446,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 447,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 448,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 449,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 450,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Ligne trop longue (124 caractères)",
+                    "line": 451,
+                    "rule": "PSR-2.line_length",
+                    "suggestion": "Divisez la ligne en plusieurs lignes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 451,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 452,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 453,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 454,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 455,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 456,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 457,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 458,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 459,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 460,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 461,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 462,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration de namespace manquante",
+                    "line": 1,
+                    "rule": "PSR-4.namespace",
+                    "suggestion": "Ajoutez une déclaration de namespace"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration strict_types manquante",
+                    "line": 1,
+                    "rule": "PSR-12.declare_strict",
+                    "suggestion": "Ajoutez declare(strict_types=1); après <?php"
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": false,
+                    "issues_count": 469
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "metrics": {
+                "total_issues": 472,
+                "errors": 2,
+                "warnings": 8,
+                "info": 462
+            }
+        }
+    ]
+}

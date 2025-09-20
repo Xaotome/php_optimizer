@@ -1,0 +1,122 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "mixed_issues.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/src\/Services\/..\/..\/storage\/uploads\/mixed_issues_1758400235_86cbca418488be43.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "warning",
+                    "message": "Possible effet de bord détecté (output)",
+                    "line": 1,
+                    "rule": "PSR-1.side_effects",
+                    "suggestion": "Évitez les sorties directes dans les fichiers de classe"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 5,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 9,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 10,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 14,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 15,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 16,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 17,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "error",
+                    "message": "Le nom de la classe 'MixedIssues' ne correspond pas au nom du fichier 'mixed_issues_1758400235_86cbca418488be43'",
+                    "line": 1,
+                    "rule": "PSR-4.class_name",
+                    "suggestion": "Renommez la classe ou le fichier pour qu'ils correspondent"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration strict_types manquante",
+                    "line": 1,
+                    "rule": "PSR-12.declare_strict",
+                    "suggestion": "Ajoutez declare(strict_types=1); après <?php"
+                },
+                {
+                    "severity": "error",
+                    "message": "Certaines propriétés ou méthodes n'ont pas de visibilité déclarée",
+                    "line": 1,
+                    "rule": "PSR-12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected à toutes les propriétés et méthodes"
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": false,
+                    "issues_count": 7
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 2
+                }
+            ],
+            "metrics": {
+                "total_issues": 11,
+                "errors": 3,
+                "warnings": 1,
+                "info": 7
+            }
+        }
+    ]
+}

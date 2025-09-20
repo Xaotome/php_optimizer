@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Optimizer - Analyseur PSR & PHP 8.4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .filter-hidden {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        .filter-visible {
+            display: block !important;
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-code text-indigo-600"></i> PHP Optimizer
+            </h1>
+            <p class="text-xl text-gray-600">Analysez et optimisez vos fichiers PHP selon les PSR et PHP 8.4</p>
+            <div class="mt-4 p-3 bg-blue-100 border border-blue-300 rounded-lg text-center">
+                <p class="text-sm text-blue-800">
+                    <i class="fas fa-info-circle"></i> 
+                    Assurez-vous d'utiliser <strong>http://localhost:8001</strong> pour accéder à l'application
+                </p>
+            </div>
+        </header>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+                    <i class="fas fa-upload text-green-600"></i> Télécharger vos fichiers PHP
+                </h2>
+                
+                <div id="uploadZone" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-indigo-400 transition-colors cursor-pointer">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                    <p class="text-lg text-gray-600 mb-2">Glissez-déposez vos fichiers PHP ici</p>
+                    <p class="text-sm text-gray-500">ou cliquez pour sélectionner</p>
+                    <input type="file" id="fileInput" multiple accept=".php" class="hidden">
+                </div>
+
+                <div id="fileList" class="mt-6 hidden">
+                    <h3 class="text-lg font-semibold mb-4">Fichiers sélectionnés :</h3>
+                    <div id="files" class="space-y-2"></div>
+                </div>
+
+                <button id="analyzeBtn" class="mt-6 w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-search"></i> Analyser les fichiers
+                </button>
+            </div>
+
+            <div id="results" class="hidden">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-chart-bar text-blue-600"></i> Résultats d'analyse
+                    </h2>
+                    <div id="analysisResults"></div>
+                </div>
+            </div>
+
+            <div id="loading" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg p-8 text-center">
+                    <i class="fas fa-spinner fa-spin text-4xl text-indigo-600 mb-4"></i>
+                    <p class="text-lg">Analyse en cours...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

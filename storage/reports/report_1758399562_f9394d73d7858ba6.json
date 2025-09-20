@@ -1,0 +1,73 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "test.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/src\/Services\/..\/..\/storage\/uploads\/test_1758399562_8d1b2a89ca2c7e2d.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "warning",
+                    "message": "Possible effet de bord détecté (output)",
+                    "line": 1,
+                    "rule": "PSR-1.side_effects",
+                    "suggestion": "Évitez les sorties directes dans les fichiers de classe"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 6,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration de namespace manquante",
+                    "line": 1,
+                    "rule": "PSR-4.namespace",
+                    "suggestion": "Ajoutez une déclaration de namespace"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration strict_types manquante",
+                    "line": 1,
+                    "rule": "PSR-12.declare_strict",
+                    "suggestion": "Ajoutez declare(strict_types=1); après <?php"
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "metrics": {
+                "total_issues": 4,
+                "errors": 2,
+                "warnings": 1,
+                "info": 1
+            }
+        }
+    ]
+}
