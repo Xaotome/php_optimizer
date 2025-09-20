@@ -52,8 +52,7 @@ try {
         ]);
         exit;
     }
-    
-    // Hash du mot de passe Xaotome$123
+
     $expectedHash = '$2y$10$L.D3.YY4leIZHCIw1xIiouHSwhJV4fosS4.RxsjdQpxnWizXIh.3e';
     
     if (!password_verify($data['password'], $expectedHash)) {

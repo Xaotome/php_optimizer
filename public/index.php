@@ -262,7 +262,6 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
         }
         
-        // Hash du mot de passe Xaotome$123 avec PASSWORD_DEFAULT
         $expectedHash = '$2y$10$L.D3.YY4leIZHCIw1xIiouHSwhJV4fosS4.RxsjdQpxnWizXIh.3e';
         
         if (!password_verify($data['password'], $expectedHash)) {

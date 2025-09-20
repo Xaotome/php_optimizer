@@ -36,7 +36,7 @@ echo "<p>Fichiers reports: $reportsBefore</p>";
 echo "<h3>Test: Nettoyage du dossier uploads</h3>";
 
 $testData = [
-    'password' => 'Xaotome$123',
+    'password' => '',
     'target' => 'uploads'
 ];
 

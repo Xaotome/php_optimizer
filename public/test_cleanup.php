@@ -54,7 +54,7 @@ echo "<pre>" . htmlspecialchars($response ?: 'Aucune réponse') . "</pre>";
 // Test 3: Essayer avec le bon mot de passe
 echo "<h3>Test 2: Bon mot de passe</h3>";
 $testData = [
-    'password' => 'Xaotome$123',
+    'password' => '',
     'target' => 'uploads'
 ];
 
