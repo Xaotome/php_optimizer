@@ -38,6 +38,19 @@ class PhpOptimizerApp {
         uploadZone.addEventListener('drop', this.handleDrop.bind(this));
         fileInput.addEventListener('change', this.handleFileSelect.bind(this));
         analyzeBtn.addEventListener('click', this.analyzeFiles.bind(this));
+        
+        // Écouteurs pour les boutons de nettoyage
+        document.getElementById('cleanUploadsBtn').addEventListener('click', () => this.showCleanupModal('uploads'));
+        document.getElementById('cleanReportsBtn').addEventListener('click', () => this.showCleanupModal('reports'));
+        document.getElementById('cancelCleanup').addEventListener('click', this.hideCleanupModal.bind(this));
+        document.getElementById('confirmCleanup').addEventListener('click', this.performCleanup.bind(this));
+        
+        // Fermer le modal avec Échap
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('cleanupModal').classList.contains('hidden')) {
+                this.hideCleanupModal();
+            }
+        });
     }
 
     handleDragOver(e) {
@@ -400,6 +413,63 @@ class PhpOptimizerApp {
                 window.applyFilters();
             }
         });
+    }
+
+    showCleanupModal(target) {
+        this.currentCleanupTarget = target;
+        document.getElementById('targetFolder').textContent = `storage/${target}`;
+        document.getElementById('adminPassword').value = '';
+        document.getElementById('cleanupModal').classList.remove('hidden');
+    }
+
+    hideCleanupModal() {
+        document.getElementById('cleanupModal').classList.add('hidden');
+        this.currentCleanupTarget = null;
+    }
+
+    async performCleanup() {
+        const password = document.getElementById('adminPassword').value;
+        
+        if (!password) {
+            alert('Veuillez entrer le mot de passe administrateur');
+            return;
+        }
+
+        try {
+            const response = await fetch(this.buildApiUrl('/admin_cleanup.php'), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    password: password,
+                    target: this.currentCleanupTarget
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                alert(`Nettoyage réussi ! ${data.data.deleted_files} fichier(s) supprimé(s) du dossier ${data.data.target}.`);
+                this.hideCleanupModal();
+            } else {
+                switch (data.error_code) {
+                    case 'INVALID_PASSWORD':
+                        alert('Mot de passe incorrect !');
+                        break;
+                    case 'INVALID_TARGET':
+                        alert('Cible non autorisée !');
+                        break;
+                    case 'DIRECTORY_NOT_FOUND':
+                        alert('Répertoire non trouvé !');
+                        break;
+                    default:
+                        alert(`Erreur : ${data.message}`);
+                }
+            }
+        } catch (error) {
+            alert(`Erreur de connexion : ${error.message}`);
+        }
     }
 
 }

@@ -249,4 +249,90 @@ $app->get('/report/{id}', function (Request $request, Response $response, array 
     }
 });
 
+$app->post('/admin/cleanup', function (Request $request, Response $response) {
+    try {
+        $data = json_decode($request->getBody()->getContents(), true);
+        
+        if (!isset($data['password']) || !isset($data['target'])) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'error_code' => 'MISSING_PARAMETERS',
+                'message' => 'Mot de passe et cible requis'
+            ]));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
+        }
+        
+        // Hash du mot de passe Xaotome$123 avec PASSWORD_DEFAULT
+        $expectedHash = '$2y$10$L.D3.YY4leIZHCIw1xIiouHSwhJV4fosS4.RxsjdQpxnWizXIh.3e';
+        
+        if (!password_verify($data['password'], $expectedHash)) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'error_code' => 'INVALID_PASSWORD',
+                'message' => 'Mot de passe incorrect'
+            ]));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(401);
+        }
+        
+        $target = $data['target'];
+        $allowedTargets = ['uploads', 'reports'];
+        
+        if (!in_array($target, $allowedTargets)) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'error_code' => 'INVALID_TARGET',
+                'message' => 'Cible non autorisée'
+            ]));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
+        }
+        
+        $targetDir = dirname(__DIR__) . "/storage/$target";
+        
+        if (!is_dir($targetDir)) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'error_code' => 'DIRECTORY_NOT_FOUND',
+                'message' => "Répertoire $target non trouvé"
+            ]));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+        }
+        
+        $deletedFiles = 0;
+        $errors = [];
+        
+        $files = glob($targetDir . '/*');
+        foreach ($files as $file) {
+            if (is_file($file)) {
+                if (unlink($file)) {
+                    $deletedFiles++;
+                } else {
+                    $errors[] = "Impossible de supprimer " . basename($file);
+                }
+            }
+        }
+        
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'message' => "Nettoyage du dossier $target terminé",
+            'data' => [
+                'deleted_files' => $deletedFiles,
+                'errors' => $errors,
+                'target' => $target
+            ],
+            'timestamp' => date('c')
+        ]));
+        
+        return $response->withHeader('Content-Type', 'application/json');
+        
+    } catch (Exception $e) {
+        error_log("Erreur cleanup: " . $e->getMessage());
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'CLEANUP_ERROR',
+            'message' => 'Erreur lors du nettoyage: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
 $app->run();
