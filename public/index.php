@@ -32,9 +32,30 @@ $app = AppFactory::create();
 
 // Set base path for subdirectory deployment
 $basePath = '';
-if (isset($_SERVER['SCRIPT_NAME']) && strpos($_SERVER['SCRIPT_NAME'], '/php_optimizer') !== false) {
+
+// Détecter le base path de plusieurs façons
+if (isset($_SERVER['SCRIPT_NAME'])) {
+    $scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+    if ($scriptDir !== '/' && $scriptDir !== '.') {
+        $basePath = $scriptDir;
+    }
+}
+
+// Méthode alternative pour la détection
+if (empty($basePath) && isset($_SERVER['REQUEST_URI']) && isset($_SERVER['SCRIPT_NAME'])) {
+    $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $scriptPath = dirname($_SERVER['SCRIPT_NAME']);
+
+    if ($scriptPath !== '/' && strpos($requestPath, $scriptPath) === 0) {
+        $basePath = $scriptPath;
+    }
+}
+
+// Forcer le base path si on est dans php_optimizer
+if (strpos($_SERVER['REQUEST_URI'] ?? '', '/php_optimizer') !== false) {
     $basePath = '/php_optimizer';
 }
+
 if (!empty($basePath)) {
     $app->setBasePath($basePath);
 }
@@ -50,6 +71,11 @@ $app->add(function (Request $request, $handler) {
 
 $app->addErrorMiddleware(true, true, true);
 
+// Route OPTIONS pour CORS preflight
+$app->options('/{routes:.+}', function (Request $request, Response $response) {
+    return $response;
+});
+
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write(file_get_contents(__DIR__ . '/index.html'));
     return $response->withHeader('Content-Type', 'text/html');
@@ -62,6 +88,23 @@ $app->get('/test', function (Request $request, Response $response) {
         'timestamp' => date('c'),
         'php_version' => PHP_VERSION
     ]));
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
+$app->get('/debug', function (Request $request, Response $response) {
+    $uri = $request->getUri();
+    $response->getBody()->write(json_encode([
+        'method' => $request->getMethod(),
+        'path' => $uri->getPath(),
+        'query' => $uri->getQuery(),
+        'base_path' => $request->getAttribute('basePath'),
+        'script_name' => $_SERVER['SCRIPT_NAME'] ?? 'N/A',
+        'request_uri' => $_SERVER['REQUEST_URI'] ?? 'N/A',
+        'server' => [
+            'HTTP_HOST' => $_SERVER['HTTP_HOST'] ?? 'N/A',
+            'SERVER_NAME' => $_SERVER['SERVER_NAME'] ?? 'N/A'
+        ]
+    ], JSON_PRETTY_PRINT));
     return $response->withHeader('Content-Type', 'application/json');
 });
 
@@ -196,6 +239,25 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
         ]));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
     }
+});
+
+// Route catch-all pour diagnostiquer les routes non trouvées (à placer en dernier)
+$app->any('/{routes:.+}', function (Request $request, Response $response) {
+    $uri = $request->getUri();
+    $response->getBody()->write(json_encode([
+        'error' => 'Route non trouvée',
+        'method' => $request->getMethod(),
+        'path' => $uri->getPath(),
+        'available_routes' => [
+            'GET /' => 'Page d\'accueil',
+            'GET /test' => 'Test API',
+            'GET /debug' => 'Informations de débogage',
+            'POST /analyze' => 'Analyse de fichiers',
+            'POST /upload' => 'Upload de fichiers',
+            'GET /report/{id}' => 'Récupération de rapport'
+        ]
+    ], JSON_PRETTY_PRINT));
+    return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
 });
 
 $app->run();
