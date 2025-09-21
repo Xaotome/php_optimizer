@@ -11,64 +11,89 @@ class CsFixerAnalyzer
         $issues = [];
 
         try {
-            $tempConfigFile = $this->createTempConfig();
-            $command = "php-cs-fixer fix --dry-run --diff --format=json --config={$tempConfigFile} " . escapeshellarg($filePath) . " 2>&1";
-            
-            $output = shell_exec($command);
-            unlink($tempConfigFile);
+            // Analyse de style simple sans shell_exec
+            $content = file_get_contents($filePath);
+            $lines = explode("\n", $content);
 
-            if ($output === null) {
-                return ['issues' => []];
-            }
-
-            if (strpos($output, '"files"') === false) {
-                return ['issues' => []];
-            }
-
-            $result = json_decode($output, true);
-
-            if (json_last_error() !== JSON_ERROR_NONE) {
-                return ['issues' => []];
-            }
-
-            if (isset($result['files']) && is_array($result['files'])) {
-                foreach ($result['files'] as $fileData) {
-                    if (isset($fileData['diff']) && !empty($fileData['diff'])) {
-                        $fixers = $fileData['appliedFixers'] ?? [];
-                        
-                        foreach ($fixers as $fixer) {
-                            $issues[] = [
-                                'severity' => $this->getFixerSeverity($fixer),
-                                'message' => $this->getFixerMessage($fixer),
-                                'line' => 0,
-                                'rule' => 'CS-Fixer.' . $fixer,
-                                'suggestion' => $this->getFixerSuggestion($fixer)
-                            ];
-                        }
-
-                        if (empty($fixers)) {
-                            $issues[] = [
-                                'severity' => 'info',
-                                'message' => 'Le formatage du code peut être amélioré',
-                                'line' => 0,
-                                'rule' => 'CS-Fixer.formatting',
-                                'suggestion' => 'Exécutez php-cs-fixer pour corriger automatiquement'
-                            ];
-                        }
-                    }
-                }
-            }
+            $issues = array_merge($issues, $this->analyzeCodeStyle($content, $lines));
 
         } catch (\Exception $e) {
             $issues[] = [
                 'severity' => 'warning',
-                'message' => 'Erreur lors de l\'analyse CS-Fixer: ' . $e->getMessage(),
+                'message' => 'PHP-CS-Fixer non disponible sur cet environnement (shell_exec désactivé)',
                 'line' => 0,
-                'rule' => 'CS-Fixer.analysis_error'
+                'rule' => 'CS-Fixer.environment_limitation',
+                'suggestion' => 'Utilisez un environnement de développement local pour l\'analyse CS-Fixer complète'
             ];
         }
 
         return ['issues' => $issues];
+    }
+
+    private function analyzeCodeStyle(string $content, array $lines): array
+    {
+        $issues = [];
+
+        foreach ($lines as $lineNumber => $line) {
+            $actualLineNumber = $lineNumber + 1;
+
+            // Vérifier les espaces en fin de ligne
+            if (preg_match('/\s+$/', $line) && !empty(trim($line))) {
+                $issues[] = [
+                    'severity' => 'info',
+                    'message' => 'Espaces en fin de ligne détectés',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.trailing_whitespace',
+                    'suggestion' => 'Supprimez les espaces en fin de ligne'
+                ];
+            }
+
+            // Vérifier l'indentation avec des tabulations
+            if (preg_match('/^\t/', $line)) {
+                $issues[] = [
+                    'severity' => 'info',
+                    'message' => 'Indentation avec des tabulations détectée',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.indentation',
+                    'suggestion' => 'Utilisez 4 espaces pour l\'indentation au lieu des tabulations'
+                ];
+            }
+
+            // Vérifier les espaces autour des opérateurs
+            if (preg_match('/\$\w+=[^=]/', $line) && !preg_match('/\$\w+\s*=\s*/', $line)) {
+                $issues[] = [
+                    'severity' => 'info',
+                    'message' => 'Espaces manquants autour de l\'opérateur d\'assignation',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.operator_spacing',
+                    'suggestion' => 'Ajoutez des espaces autour des opérateurs'
+                ];
+            }
+
+            // Vérifier l'utilisation de array() au lieu de []
+            if (preg_match('/array\s*\(/', $line)) {
+                $issues[] = [
+                    'severity' => 'warning',
+                    'message' => 'Utilisation de array() au lieu de la syntaxe courte []',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.array_syntax',
+                    'suggestion' => 'Remplacez array() par [] pour une syntaxe plus moderne'
+                ];
+            }
+
+            // Vérifier les guillemets doubles inutiles
+            if (preg_match('/"[^"\\\\$]*"/', $line) && !preg_match('/"[^"]*\$[^"]*"/', $line)) {
+                $issues[] = [
+                    'severity' => 'info',
+                    'message' => 'Utilisation de guillemets doubles sans interpolation',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.single_quote',
+                    'suggestion' => 'Utilisez des guillemets simples quand il n\'y a pas d\'interpolation'
+                ];
+            }
+        }
+
+        return $issues;
     }
 
     private function createTempConfig(): string

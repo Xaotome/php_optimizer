@@ -63,23 +63,19 @@ class RectorAnalyzer
         copy($filePath, $tempFile);
 
         try {
-            // Exécuter Rector en mode dry-run pour obtenir un diff
-            $command = sprintf(
-                '%s process %s --dry-run --config=%s --no-progress-bar 2>&1',
-                escapeshellarg($this->rectorBinary),
-                escapeshellarg($tempFile),
-                escapeshellarg($this->configPath)
-            );
-
-            $output = shell_exec($command);
-
-            if ($output && strpos($output, 'would change') !== false) {
-                $suggestions = $this->parseDryRunOutput($output, $filePath);
-            }
-
+            // Rector non disponible avec shell_exec désactivé
             // Analyser le contenu pour des patterns spécifiques à PHP 8.4
             $content = file_get_contents($filePath);
-            $suggestions = array_merge($suggestions, $this->analyzeForPhp84Patterns($content));
+            $suggestions = $this->analyzeForPhp84Patterns($content);
+
+            // Ajouter un message d'information sur la limitation
+            if (empty($suggestions)) {
+                $suggestions[] = [
+                    'message' => 'Rector non disponible sur cet environnement (shell_exec désactivé)',
+                    'rule' => 'environment_limitation',
+                    'suggestion' => 'Utilisez un environnement de développement local pour l\'analyse Rector complète'
+                ];
+            }
 
         } finally {
             // Nettoyer le fichier temporaire
