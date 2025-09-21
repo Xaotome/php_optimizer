@@ -271,11 +271,14 @@ class PhpOptimizerApp {
     }
 
     generateFileReport(file, fileIndex) {
-        const statusIcon = file.status === 'success' ? 
+        const statusIcon = file.status === 'success' ?
             '<i class="fas fa-check-circle text-green-500"></i>' :
-            file.status === 'warning' ? 
+            file.status === 'warning' ?
             '<i class="fas fa-exclamation-triangle text-yellow-500"></i>' :
             '<i class="fas fa-times-circle text-red-500"></i>';
+
+        // Référence à la méthode escapeHtml pour utilisation dans les templates
+        const escapeHtml = this.escapeHtml.bind(this);
 
         let html = `
             <div class="border rounded-lg overflow-hidden" data-file-index="${fileIndex}">
@@ -368,13 +371,13 @@ class PhpOptimizerApp {
                                                 <div class="bg-red-100 px-3 py-1 text-xs font-medium text-red-800 border-b border-red-200">
                                                     <i class="fas fa-minus-circle mr-1"></i>Avant (ancien code)
                                                 </div>
-                                                <pre class="text-xs p-3 overflow-x-auto"><code>${this.escapeHtml(issue.before_code)}</code></pre>
+                                                <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(issue.before_code)}</code></pre>
                                             </div>
                                             <div class="bg-green-50">
                                                 <div class="bg-green-100 px-3 py-1 text-xs font-medium text-green-800 border-b border-green-200">
                                                     <i class="fas fa-plus-circle mr-1"></i>Après (PHP 8.4)
                                                 </div>
-                                                <pre class="text-xs p-3 overflow-x-auto"><code>${this.escapeHtml(issue.after_code)}</code></pre>
+                                                <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(issue.after_code)}</code></pre>
                                             </div>
                                         </div>
                                     </div>
@@ -458,7 +461,8 @@ class PhpOptimizerApp {
             const errorChecked = document.getElementById('filterError')?.checked;
             const warningChecked = document.getElementById('filterWarning')?.checked;
             const infoChecked = document.getElementById('filterInfo')?.checked;
-            
+            const migrationChecked = document.getElementById('filterMigration')?.checked;
+
             // Trouver tous les éléments et appliquer le filtrage
             const items = document.querySelectorAll('.issue-item');
             
@@ -469,6 +473,7 @@ class PhpOptimizerApp {
                 if (severity === 'error' && errorChecked) shouldShow = true;
                 if (severity === 'warning' && warningChecked) shouldShow = true;
                 if (severity === 'info' && infoChecked) shouldShow = true;
+                if (severity === 'migration' && migrationChecked) shouldShow = true;
                 
                 if (shouldShow) {
                     item.style.display = 'block';

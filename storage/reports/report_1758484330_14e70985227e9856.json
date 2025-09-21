@@ -1,0 +1,109 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "test_simple.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/storage\/uploads\/test_simple_1758484330_8a0e3487ff9d23e4.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "error",
+                    "message": "Le nom de la classe 'SimpleTest' ne correspond pas au nom du fichier 'test_simple_1758484330_8a0e3487ff9d23e4'",
+                    "line": 1,
+                    "rule": "PSR-4.class_name",
+                    "suggestion": "Renommez la classe ou le fichier pour qu'ils correspondent"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 9,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly class pour les value objects",
+                    "line": 7,
+                    "rule": "PHP-8.4.readonly_class",
+                    "suggestion": "PHP 8.2+ : Classes readonly pour l'immutabilité complète",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "class SimpleTest {\n    public readonly string $name;\n    public readonly int $age;\n}",
+                    "after_code": "readonly class SimpleTest {\n    public string $name;\n    public int $age;\n}",
+                    "explanation": "Les classes readonly rendent toutes les propriétés readonly automatiquement, parfait pour les value objects et DTOs immutables."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_contains() au lieu de strpos() !== false",
+                    "line": 12,
+                    "rule": "PHP-8.4.str_contains",
+                    "suggestion": "PHP 8.0+ : Syntaxe plus claire et performante avec str_contains()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "strpos($data, 'test') !== false",
+                    "after_code": "str_contains($data, 'test')",
+                    "explanation": "str_contains() est plus lisible et exprime clairement l'intention. Elle retourne directement un booléen sans comparaison nécessaire."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser match() pour des correspondances simples",
+                    "line": 17,
+                    "rule": "PHP-8.4.match_expression",
+                    "suggestion": "PHP 8.0+ : match() est plus concis et type-safe",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "switch ($data) {\n    case 'a': return 1;\n    case 'b': return 2;\n    default: return 0;\n}",
+                    "after_code": "return match($data) {\n    'a' => 1,\n    'b' => 2,\n    default => 0\n};",
+                    "explanation": "match() est une expression (retourne une valeur), supporte la comparaison stricte (===), ne nécessite pas de break, et lève une exception si aucun cas ne correspond (sauf default)."
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": true,
+                    "issues_count": 0
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 3,
+                "by_category": {
+                    "migration": 3
+                },
+                "php_versions": {
+                    "8.4": 3
+                },
+                "complexity": "low"
+            },
+            "metrics": {
+                "total_issues": 5,
+                "errors": 1,
+                "warnings": 1,
+                "info": 3,
+                "migration_suggestions": 3
+            }
+        }
+    ]
+}

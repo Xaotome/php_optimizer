@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Interface - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Test Interface - Détails Migration</h1>
+
+        <button id="testBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Tester l'affichage des détails
+        </button>
+
+        <div id="results" class="mt-6"></div>
+    </div>
+
+    <script>
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.getElementById('testBtn').addEventListener('click', function() {
+            // Simuler une issue avec tous les détails
+            const issue = {
+                severity: 'info',
+                category: 'migration',
+                message: 'Utilisez str_contains() au lieu de strpos() !== false',
+                line: 12,
+                rule: 'PHP-8.4.str_contains',
+                suggestion: 'PHP 8.0+ : Syntaxe plus claire et performante avec str_contains()',
+                php_version: '8.4',
+                explanation: 'str_contains() est plus lisible et exprime clairement l\'intention. Elle retourne directement un booléen sans comparaison nécessaire.',
+                before_code: 'strpos($data, \'test\') !== false',
+                after_code: 'str_contains($data, \'test\')'
+            };
+
+            const isMigration = issue.category === 'migration';
+            const severityClass = isMigration ? 'border-purple-200 bg-purple-50' : 'border-blue-200 bg-blue-50';
+            const severityBadge = isMigration ? 'bg-purple-200 text-purple-800' : 'bg-blue-200 text-blue-800';
+            const severityText = isMigration ? 'PHP 8.4' : issue.severity.toUpperCase();
+            const severityIcon = isMigration ? 'fas fa-rocket' : 'fas fa-info-circle';
+
+            const html = `
+                <div class="issue-item border ${severityClass} rounded p-3" data-severity="migration">
+                    <div class="flex items-start">
+                        <span class="px-2 py-1 text-xs rounded font-semibold mr-3 ${severityBadge}">
+                            <i class="${severityIcon} mr-1"></i>${severityText}
+                        </span>
+                        <div class="flex-1">
+                            <p class="font-medium">${issue.message}</p>
+                            <p class="text-sm text-gray-600">Ligne ${issue.line} - ${issue.rule}</p>
+                            ${issue.suggestion ? `<p class="text-sm text-green-600 mt-1"><i class="fas fa-lightbulb"></i> ${issue.suggestion}</p>` : ''}
+                            ${issue.php_version ? `<p class="text-xs text-purple-600 mt-1"><i class="fas fa-code"></i> Compatible PHP ${issue.php_version}</p>` : ''}
+                            ${issue.explanation ? `<p class="text-sm text-blue-700 mt-2 bg-blue-50 p-2 rounded border-l-4 border-blue-200"><i class="fas fa-info-circle mr-1"></i> ${issue.explanation}</p>` : ''}
+                            ${issue.before_code && issue.after_code ? `
+                                <div class="mt-3 bg-gray-50 rounded-lg overflow-hidden">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                                        <div class="bg-red-50 border-r border-gray-200">
+                                            <div class="bg-red-100 px-3 py-1 text-xs font-medium text-red-800 border-b border-red-200">
+                                                <i class="fas fa-minus-circle mr-1"></i>Avant (ancien code)
+                                            </div>
+                                            <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(issue.before_code)}</code></pre>
+                                        </div>
+                                        <div class="bg-green-50">
+                                            <div class="bg-green-100 px-3 py-1 text-xs font-medium text-green-800 border-b border-green-200">
+                                                <i class="fas fa-plus-circle mr-1"></i>Après (PHP 8.4)
+                                            </div>
+                                            <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(issue.after_code)}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('results').innerHTML = html;
+        });
+    </script>
+</body>
+</html>

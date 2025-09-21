@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Migration - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Debug - Test Migration PHP 8.4</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-lg font-semibold mb-4">Test de l'API /analyze</h2>
+
+            <button id="testApi" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-4">
+                Tester API avec fichier exemple
+            </button>
+
+            <button id="testDisplay" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                Tester affichage manuel
+            </button>
+
+            <div id="results" class="mt-6"></div>
+        </div>
+    </div>
+
+    <script>
+        // Créer un fichier de test simple
+        function createTestFile() {
+            const content = `<?php
+
+declare(strict_types=1);
+
+namespace Test;
+
+class Example
+{
+    public function test($text)
+    {
+        if (strpos($text, 'hello') !== false) {
+            return true;
+        }
+        return false;
+    }
+}`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            return new File([blob], 'test.php', { type: 'text/plain' });
+        }
+
+        document.getElementById('testApi').addEventListener('click', async function() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p class="text-blue-600">Envoi du fichier de test...</p>';
+
+            try {
+                const formData = new FormData();
+                formData.append('files[]', createTestFile());
+
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                // Afficher la réponse JSON
+                resultsDiv.innerHTML = `
+                    <h3 class="font-semibold mb-2">Réponse API:</h3>
+                    <pre class="bg-gray-100 p-4 rounded text-xs overflow-auto max-h-96">${JSON.stringify(result, null, 2)}</pre>
+                `;
+
+                // Compter les issues de migration
+                const migrationIssues = result.data?.files?.[0]?.issues?.filter(issue => issue.category === 'migration') || [];
+
+                if (migrationIssues.length > 0) {
+                    resultsDiv.innerHTML += `
+                        <div class="mt-4 p-4 bg-green-100 border border-green-200 rounded">
+                            <p class="text-green-800 font-semibold">✅ ${migrationIssues.length} suggestion(s) de migration trouvée(s)</p>
+                            <p class="text-sm text-green-700">Les détails sont présents dans la réponse JSON.</p>
+                        </div>
+                    `;
+                } else {
+                    resultsDiv.innerHTML += `
+                        <div class="mt-4 p-4 bg-yellow-100 border border-yellow-200 rounded">
+                            <p class="text-yellow-800 font-semibold">⚠️ Aucune suggestion de migration trouvée</p>
+                        </div>
+                    `;
+                }
+
+            } catch (error) {
+                resultsDiv.innerHTML = `<p class="text-red-600">Erreur: ${error.message}</p>`;
+            }
+        });
+
+        document.getElementById('testDisplay').addEventListener('click', function() {
+            const resultsDiv = document.getElementById('results');
+
+            // Simuler les données de migration comme elles devraient apparaître
+            const mockIssue = {
+                severity: 'info',
+                category: 'migration',
+                message: 'Utilisez str_contains() au lieu de strpos() !== false',
+                line: 12,
+                rule: 'PHP-8.4.str_contains',
+                suggestion: 'PHP 8.0+ : Syntaxe plus claire et performante avec str_contains()',
+                php_version: '8.4',
+                explanation: 'str_contains() est plus lisible et exprime clairement l\'intention. Elle retourne directement un booléen sans comparaison nécessaire.',
+                before_code: 'strpos($text, \'hello\') !== false',
+                after_code: 'str_contains($text, \'hello\')'
+            };
+
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            const html = `
+                <h3 class="font-semibold mb-4">Exemple de rendu des détails de migration:</h3>
+                <div class="issue-item border border-purple-200 bg-purple-50 rounded p-3" data-severity="migration">
+                    <div class="flex items-start">
+                        <span class="px-2 py-1 text-xs rounded font-semibold mr-3 bg-purple-200 text-purple-800">
+                            <i class="fas fa-rocket mr-1"></i>PHP 8.4
+                        </span>
+                        <div class="flex-1">
+                            <p class="font-medium">${mockIssue.message}</p>
+                            <p class="text-sm text-gray-600">Ligne ${mockIssue.line} - ${mockIssue.rule}</p>
+                            <p class="text-sm text-green-600 mt-1"><i class="fas fa-lightbulb"></i> ${mockIssue.suggestion}</p>
+                            <p class="text-xs text-purple-600 mt-1"><i class="fas fa-code"></i> Compatible PHP ${mockIssue.php_version}</p>
+                            <p class="text-sm text-blue-700 mt-2 bg-blue-50 p-2 rounded border-l-4 border-blue-200">
+                                <i class="fas fa-info-circle mr-1"></i> ${mockIssue.explanation}
+                            </p>
+                            <div class="mt-3 bg-gray-50 rounded-lg overflow-hidden">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                                    <div class="bg-red-50 border-r border-gray-200">
+                                        <div class="bg-red-100 px-3 py-1 text-xs font-medium text-red-800 border-b border-red-200">
+                                            <i class="fas fa-minus-circle mr-1"></i>Avant (ancien code)
+                                        </div>
+                                        <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(mockIssue.before_code)}</code></pre>
+                                    </div>
+                                    <div class="bg-green-50">
+                                        <div class="bg-green-100 px-3 py-1 text-xs font-medium text-green-800 border-b border-green-200">
+                                            <i class="fas fa-plus-circle mr-1"></i>Après (PHP 8.4)
+                                        </div>
+                                        <pre class="text-xs p-3 overflow-x-auto"><code>${escapeHtml(mockIssue.after_code)}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            resultsDiv.innerHTML = html;
+        });
+    </script>
+</body>
+</html>
