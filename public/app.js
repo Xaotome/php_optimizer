@@ -360,6 +360,25 @@ class PhpOptimizerApp {
                                 <p class="text-sm text-gray-600">Ligne ${issue.line} - ${issue.rule}</p>
                                 ${issue.suggestion ? `<p class="text-sm text-green-600 mt-1"><i class="fas fa-lightbulb"></i> ${issue.suggestion}</p>` : ''}
                                 ${issue.php_version ? `<p class="text-xs text-purple-600 mt-1"><i class="fas fa-code"></i> Compatible PHP ${issue.php_version}</p>` : ''}
+                                ${issue.explanation ? `<p class="text-sm text-blue-700 mt-2 bg-blue-50 p-2 rounded border-l-4 border-blue-200"><i class="fas fa-info-circle mr-1"></i> ${issue.explanation}</p>` : ''}
+                                ${issue.before_code && issue.after_code ? `
+                                    <div class="mt-3 bg-gray-50 rounded-lg overflow-hidden">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                                            <div class="bg-red-50 border-r border-gray-200">
+                                                <div class="bg-red-100 px-3 py-1 text-xs font-medium text-red-800 border-b border-red-200">
+                                                    <i class="fas fa-minus-circle mr-1"></i>Avant (ancien code)
+                                                </div>
+                                                <pre class="text-xs p-3 overflow-x-auto"><code>${this.escapeHtml(issue.before_code)}</code></pre>
+                                            </div>
+                                            <div class="bg-green-50">
+                                                <div class="bg-green-100 px-3 py-1 text-xs font-medium text-green-800 border-b border-green-200">
+                                                    <i class="fas fa-plus-circle mr-1"></i>Après (PHP 8.4)
+                                                </div>
+                                                <pre class="text-xs p-3 overflow-x-auto"><code>${this.escapeHtml(issue.after_code)}</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ` : ''}
                                 ${issue.diff ? `<pre class="text-xs bg-gray-100 p-2 mt-2 rounded overflow-x-auto"><code>${issue.diff}</code></pre>` : ''}
                             </div>
                         </div>
@@ -374,6 +393,12 @@ class PhpOptimizerApp {
 
         html += '</div></div>';
         return html;
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 
     showError(message) {
