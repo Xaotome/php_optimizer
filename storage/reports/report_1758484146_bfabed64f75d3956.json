@@ -1,0 +1,414 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "test_detailed_migration.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/storage\/uploads\/test_detailed_migration_1758484146_1c988c4c4a4bef5d.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "error",
+                    "message": "Le nom de la classe 'DetailedMigrationTest' ne correspond pas au nom du fichier 'test_detailed_migration_1758484146_1c988c4c4a4bef5d'",
+                    "line": 1,
+                    "rule": "PSR-4.class_name",
+                    "suggestion": "Renommez la classe ou le fichier pour qu'ils correspondent"
+                },
+                {
+                    "severity": "error",
+                    "message": "Certaines propriétés ou méthodes n'ont pas de visibilité déclarée",
+                    "line": 1,
+                    "rule": "PSR-12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected à toutes les propriétés et méthodes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 22,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 23,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 33,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 38,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 20,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 30,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 53,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 59,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 65,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 72,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Utilisation de array() au lieu de la syntaxe courte []",
+                    "line": 62,
+                    "rule": "CS-Fixer.array_syntax",
+                    "suggestion": "Remplacez array() par [] pour une syntaxe plus moderne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 8,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 9,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 10,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 11,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 22,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 23,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 27,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 28,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 29,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 68,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 79,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 9,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 10,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe nullable ? au lieu de union avec null",
+                    "line": 10,
+                    "rule": "PHP-8.4.nullable_types",
+                    "suggestion": "PHP 7.1+ : Syntaxe plus concise pour les types nullable",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly class pour les value objects",
+                    "line": 12,
+                    "rule": "PHP-8.4.readonly_class",
+                    "suggestion": "PHP 8.2+ : Classes readonly pour l'immutabilité complète",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 14,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "PHP 8.1+ : Enums offrent type-safety et fonctionnalités avancées",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 15,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "PHP 8.1+ : Enums offrent type-safety et fonctionnalités avancées",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly pour les propriétés immutables",
+                    "line": 17,
+                    "rule": "PHP-8.4.readonly_properties",
+                    "suggestion": "PHP 8.1+ : readonly garantit l'immutabilité après initialisation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly pour les propriétés immutables",
+                    "line": 18,
+                    "rule": "PHP-8.4.readonly_properties",
+                    "suggestion": "PHP 8.1+ : readonly garantit l'immutabilité après initialisation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser Constructor Property Promotion",
+                    "line": 20,
+                    "rule": "PHP-8.4.constructor_promotion",
+                    "suggestion": "PHP 8.0+ : Simplifiez les propriétés et constructeur",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 27,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 30,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_contains() au lieu de strpos() !== false",
+                    "line": 33,
+                    "rule": "PHP-8.4.str_contains",
+                    "suggestion": "PHP 8.0+ : Syntaxe plus claire et performante avec str_contains()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_starts_with() au lieu de strpos() === 0",
+                    "line": 38,
+                    "rule": "PHP-8.4.str_starts_with",
+                    "suggestion": "PHP 8.0+ : Fonction dédiée pour vérifier le début d'une chaîne",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser match() pour des correspondances simples",
+                    "line": 43,
+                    "rule": "PHP-8.4.match_expression",
+                    "suggestion": "PHP 8.0+ : match() est plus concis et type-safe",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez array_is_list() pour vérifier si un tableau est une liste",
+                    "line": 56,
+                    "rule": "PHP-8.4.array_is_list",
+                    "suggestion": "PHP 8.1+ : Remplacez cette vérification manuelle par array_is_list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly class pour les value objects",
+                    "line": 61,
+                    "rule": "PHP-8.4.readonly_class",
+                    "suggestion": "PHP 8.2+ : Classes readonly pour l'immutabilité complète",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe de destructuration moderne []",
+                    "line": 67,
+                    "rule": "PHP-8.4.array_destructuring",
+                    "suggestion": "PHP 7.1+ : Syntaxe [] plus moderne que list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe de destructuration moderne []",
+                    "line": 68,
+                    "rule": "PHP-8.4.array_destructuring",
+                    "suggestion": "PHP 7.1+ : Syntaxe [] plus moderne que list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 76,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 19,
+                "by_category": {
+                    "migration": 19
+                },
+                "php_versions": {
+                    "8.4": 19
+                },
+                "complexity": "medium"
+            },
+            "metrics": {
+                "total_issues": 43,
+                "errors": 6,
+                "warnings": 14,
+                "info": 23,
+                "migration_suggestions": 19
+            }
+        }
+    ]
+}

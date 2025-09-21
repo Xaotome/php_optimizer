@@ -1,0 +1,471 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "test_detailed_migration.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/storage\/uploads\/test_detailed_migration_1758484164_72b588788a9f42c2.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "error",
+                    "message": "Le nom de la classe 'DetailedMigrationTest' ne correspond pas au nom du fichier 'test_detailed_migration_1758484164_72b588788a9f42c2'",
+                    "line": 1,
+                    "rule": "PSR-4.class_name",
+                    "suggestion": "Renommez la classe ou le fichier pour qu'ils correspondent"
+                },
+                {
+                    "severity": "error",
+                    "message": "Certaines propriétés ou méthodes n'ont pas de visibilité déclarée",
+                    "line": 1,
+                    "rule": "PSR-12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected à toutes les propriétés et méthodes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 22,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 23,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 33,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 38,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 20,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 30,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 53,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 59,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 65,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Paramètre de fonction sans type déclaré",
+                    "line": 72,
+                    "rule": "PHPStan.missing_param_type",
+                    "suggestion": "Ajoutez des types aux paramètres de fonction"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Utilisation de array() au lieu de la syntaxe courte []",
+                    "line": 62,
+                    "rule": "CS-Fixer.array_syntax",
+                    "suggestion": "Remplacez array() par [] pour une syntaxe plus moderne"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 8,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 9,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 10,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 11,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 22,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 23,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 27,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 28,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Indentation incorrecte (doit être un multiple de 4 espaces)",
+                    "line": 29,
+                    "rule": "CodeSniffer.PSR12.indentation",
+                    "suggestion": "Utilisez des multiples de 4 espaces pour l'indentation"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 68,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 79,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 9,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "\/**\n * @param string|int $userId\n *\/\nfunction method($userId)",
+                    "after_code": "function method(string|int $userId)",
+                    "explanation": "Les union types natifs offrent une vérification à l'exécution, une meilleure intégration IDE, et éliminent la divergence entre documentation et code réel."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 10,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "\/**\n * @param array|null $options\n *\/\nfunction method($options)",
+                    "after_code": "function method(array|null $options)",
+                    "explanation": "Les union types natifs offrent une vérification à l'exécution, une meilleure intégration IDE, et éliminent la divergence entre documentation et code réel."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe nullable ? au lieu de union avec null",
+                    "line": 10,
+                    "rule": "PHP-8.4.nullable_types",
+                    "suggestion": "PHP 7.1+ : Syntaxe plus concise pour les types nullable",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "\/**\n * @param array|null $options\n *\/\nfunction method($options)",
+                    "after_code": "function method(?array $options)",
+                    "explanation": "La syntaxe ?Type est plus concise que Type|null et indique clairement qu'un paramètre peut être null."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly class pour les value objects",
+                    "line": 12,
+                    "rule": "PHP-8.4.readonly_class",
+                    "suggestion": "PHP 8.2+ : Classes readonly pour l'immutabilité complète",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "class DetailedMigrationTest {\n    public readonly string $name;\n    public readonly int $age;\n}",
+                    "after_code": "readonly class DetailedMigrationTest {\n    public string $name;\n    public int $age;\n}",
+                    "explanation": "Les classes readonly rendent toutes les propriétés readonly automatiquement, parfait pour les value objects et DTOs immutables."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 14,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "PHP 8.1+ : Enums offrent type-safety et fonctionnalités avancées",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "class Status {\n    const STATUS_ACTIVE = 'active';\n    const INACTIVE = 'inactive';\n}",
+                    "after_code": "enum Status: string {\n    case StatusActive = 'active';\n    case Inactive = 'inactive';\n}",
+                    "explanation": "Les Enums garantissent que seules les valeurs définies sont utilisées, offrent des méthodes intégrées (cases(), name, value), et améliorent la lisibilité du code."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 15,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "PHP 8.1+ : Enums offrent type-safety et fonctionnalités avancées",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "class Status {\n    const STATUS_INACTIVE = 'inactive';\n    const INACTIVE = 'inactive';\n}",
+                    "after_code": "enum Status: string {\n    case StatusInactive = 'inactive';\n    case Inactive = 'inactive';\n}",
+                    "explanation": "Les Enums garantissent que seules les valeurs définies sont utilisées, offrent des méthodes intégrées (cases(), name, value), et améliorent la lisibilité du code."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly pour les propriétés immutables",
+                    "line": 17,
+                    "rule": "PHP-8.4.readonly_properties",
+                    "suggestion": "PHP 8.1+ : readonly garantit l'immutabilité après initialisation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "private $name;",
+                    "after_code": "private readonly $name;",
+                    "explanation": "Les propriétés readonly ne peuvent être assignées qu'une seule fois (dans le constructeur ou à la déclaration). Elles éliminent les getters et améliorent les performances."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly pour les propriétés immutables",
+                    "line": 18,
+                    "rule": "PHP-8.4.readonly_properties",
+                    "suggestion": "PHP 8.1+ : readonly garantit l'immutabilité après initialisation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "private $email;",
+                    "after_code": "private readonly $email;",
+                    "explanation": "Les propriétés readonly ne peuvent être assignées qu'une seule fois (dans le constructeur ou à la déclaration). Elles éliminent les getters et améliorent les performances."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser Constructor Property Promotion",
+                    "line": 20,
+                    "rule": "PHP-8.4.constructor_promotion",
+                    "suggestion": "PHP 8.0+ : Simplifiez les propriétés et constructeur",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "private $name;\npublic function __construct(string $name) {\n    $this->name = $name;\n}",
+                    "after_code": "public function __construct(private string $name) {}",
+                    "explanation": "Constructor Property Promotion réduit le code boilerplate en déclarant et assignant les propriétés directement dans les paramètres du constructeur."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 27,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "PHP 8.0+ : Types natifs plus robustes que la documentation",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "\/**\n * @param string|int $userId\n *\/\nfunction method($userId)",
+                    "after_code": "function method(string|int $userId)",
+                    "explanation": "Les union types natifs offrent une vérification à l'exécution, une meilleure intégration IDE, et éliminent la divergence entre documentation et code réel."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 30,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_contains() au lieu de strpos() !== false",
+                    "line": 33,
+                    "rule": "PHP-8.4.str_contains",
+                    "suggestion": "PHP 8.0+ : Syntaxe plus claire et performante avec str_contains()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "strpos($this->email, '@example.com') !== false",
+                    "after_code": "str_contains($this->email, '@example.com')",
+                    "explanation": "str_contains() est plus lisible et exprime clairement l'intention. Elle retourne directement un booléen sans comparaison nécessaire."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_starts_with() au lieu de strpos() === 0",
+                    "line": 38,
+                    "rule": "PHP-8.4.str_starts_with",
+                    "suggestion": "PHP 8.0+ : Fonction dédiée pour vérifier le début d'une chaîne",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "strpos($this->name, 'Mr.') === 0",
+                    "after_code": "str_starts_with($this->name, 'Mr.')",
+                    "explanation": "str_starts_with() est spécialement conçue pour vérifier si une chaîne commence par une sous-chaîne."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser match() pour des correspondances simples",
+                    "line": 43,
+                    "rule": "PHP-8.4.match_expression",
+                    "suggestion": "PHP 8.0+ : match() est plus concis et type-safe",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "switch ($userId) {\n    case 'a': return 1;\n    case 'b': return 2;\n    default: return 0;\n}",
+                    "after_code": "return match($userId) {\n    'a' => 1,\n    'b' => 2,\n    default => 0\n};",
+                    "explanation": "match() est une expression (retourne une valeur), supporte la comparaison stricte (===), ne nécessite pas de break, et lève une exception si aucun cas ne correspond (sauf default)."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez array_is_list() pour vérifier si un tableau est une liste",
+                    "line": 56,
+                    "rule": "PHP-8.4.array_is_list",
+                    "suggestion": "PHP 8.1+ : Remplacez cette vérification manuelle par array_is_list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "array_keys($data) === range(0, count($data) - 1)",
+                    "after_code": "array_is_list($data)",
+                    "explanation": "array_is_list() est une fonction native PHP 8.1+ qui vérifie efficacement si un tableau est une liste (clés numériques séquentielles à partir de 0)."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly class pour les value objects",
+                    "line": 61,
+                    "rule": "PHP-8.4.readonly_class",
+                    "suggestion": "PHP 8.2+ : Classes readonly pour l'immutabilité complète",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "class callable {\n    public readonly string $name;\n    public readonly int $age;\n}",
+                    "after_code": "readonly class callable {\n    public string $name;\n    public int $age;\n}",
+                    "explanation": "Les classes readonly rendent toutes les propriétés readonly automatiquement, parfait pour les value objects et DTOs immutables."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe de destructuration moderne []",
+                    "line": 67,
+                    "rule": "PHP-8.4.array_destructuring",
+                    "suggestion": "PHP 7.1+ : Syntaxe [] plus moderne que list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "list($a, $b) = $array;",
+                    "after_code": "[$a, $b] = $array;",
+                    "explanation": "La syntaxe [] est plus consistante avec la déclaration d'arrays et supporte la destructuration avec clés nommées."
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez la syntaxe de destructuration moderne []",
+                    "line": 68,
+                    "rule": "PHP-8.4.array_destructuring",
+                    "suggestion": "PHP 7.1+ : Syntaxe [] plus moderne que list()",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "list($a, $b) = $array;",
+                    "after_code": "[$a, $b] = $array;",
+                    "explanation": "La syntaxe [] est plus consistante avec la déclaration d'arrays et supporte la destructuration avec clés nommées."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 76,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 19,
+                "by_category": {
+                    "migration": 19
+                },
+                "php_versions": {
+                    "8.4": 19
+                },
+                "complexity": "medium"
+            },
+            "metrics": {
+                "total_issues": 43,
+                "errors": 6,
+                "warnings": 14,
+                "info": 23,
+                "migration_suggestions": 19
+            }
+        }
+    ]
+}

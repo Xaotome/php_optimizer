@@ -35,7 +35,10 @@ class RectorAnalyzer
                     'suggestion' => $suggestion['suggestion'],
                     'category' => 'migration',
                     'php_version' => '8.4',
-                    'diff' => $suggestion['diff'] ?? null
+                    'diff' => $suggestion['diff'] ?? null,
+                    'before_code' => $suggestion['before_code'] ?? null,
+                    'after_code' => $suggestion['after_code'] ?? null,
+                    'explanation' => $suggestion['explanation'] ?? null
                 ];
             }
         } catch (\Exception $e) {
