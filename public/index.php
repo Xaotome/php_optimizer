@@ -71,11 +71,6 @@ $app->add(function (Request $request, $handler) {
 
 $app->addErrorMiddleware(true, true, true);
 
-// Route OPTIONS pour CORS preflight
-$app->options('/{routes:.+}', function (Request $request, Response $response) {
-    return $response;
-});
-
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write(file_get_contents(__DIR__ . '/index.html'));
     return $response->withHeader('Content-Type', 'text/html');
@@ -241,23 +236,9 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
     }
 });
 
-// Route catch-all pour diagnostiquer les routes non trouvées (à placer en dernier)
-$app->any('/{routes:.+}', function (Request $request, Response $response) {
-    $uri = $request->getUri();
-    $response->getBody()->write(json_encode([
-        'error' => 'Route non trouvée',
-        'method' => $request->getMethod(),
-        'path' => $uri->getPath(),
-        'available_routes' => [
-            'GET /' => 'Page d\'accueil',
-            'GET /test' => 'Test API',
-            'GET /debug' => 'Informations de débogage',
-            'POST /analyze' => 'Analyse de fichiers',
-            'POST /upload' => 'Upload de fichiers',
-            'GET /report/{id}' => 'Récupération de rapport'
-        ]
-    ], JSON_PRETTY_PRINT));
-    return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+// Route OPTIONS pour CORS
+$app->options('/{routes:.*}', function (Request $request, Response $response) {
+    return $response;
 });
 
 $app->run();
