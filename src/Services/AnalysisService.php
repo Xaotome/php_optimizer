@@ -8,6 +8,7 @@ use PhpOptimizer\Analyzers\PsrAnalyzer;
 use PhpOptimizer\Analyzers\PhpStanAnalyzer;
 use PhpOptimizer\Analyzers\CsFixerAnalyzer;
 use PhpOptimizer\Analyzers\CodeSnifferAnalyzer;
+use PhpOptimizer\Analyzers\RectorAnalyzer;
 
 class AnalysisService
 {
@@ -15,6 +16,7 @@ class AnalysisService
     private PhpStanAnalyzer $phpstanAnalyzer;
     private CsFixerAnalyzer $csFixerAnalyzer;
     private CodeSnifferAnalyzer $codeSnifferAnalyzer;
+    private RectorAnalyzer $rectorAnalyzer;
     private string $reportsDirectory;
 
     public function __construct()
@@ -23,6 +25,7 @@ class AnalysisService
         $this->phpstanAnalyzer = new PhpStanAnalyzer();
         $this->csFixerAnalyzer = new CsFixerAnalyzer();
         $this->codeSnifferAnalyzer = new CodeSnifferAnalyzer();
+        $this->rectorAnalyzer = new RectorAnalyzer();
         $this->reportsDirectory = dirname(__DIR__, 2) . '/storage/reports/';
         $this->ensureReportsDirectoryExists();
     }
@@ -99,6 +102,10 @@ class AnalysisService
         $codeSnifferResults = $this->codeSnifferAnalyzer->analyze($filePath);
         $allIssues = array_merge($allIssues, $codeSnifferResults['issues']);
 
+        // Analyse Rector pour migration PHP 8.4
+        $rectorResults = $this->rectorAnalyzer->analyze($filePath);
+        $allIssues = array_merge($allIssues, $rectorResults['issues']);
+
         $status = $this->determineFileStatus($allIssues);
 
         return [
@@ -107,11 +114,13 @@ class AnalysisService
             'status' => $status,
             'issues' => $allIssues,
             'psr_compliance' => $psrCompliance,
+            'migration_summary' => $rectorResults['migration_summary'] ?? null,
             'metrics' => [
                 'total_issues' => count($allIssues),
                 'errors' => count(array_filter($allIssues, fn($issue) => $issue['severity'] === 'error')),
                 'warnings' => count(array_filter($allIssues, fn($issue) => $issue['severity'] === 'warning')),
-                'info' => count(array_filter($allIssues, fn($issue) => $issue['severity'] === 'info'))
+                'info' => count(array_filter($allIssues, fn($issue) => $issue['severity'] === 'info')),
+                'migration_suggestions' => count(array_filter($allIssues, fn($issue) => ($issue['category'] ?? '') === 'migration'))
             ]
         ];
     }

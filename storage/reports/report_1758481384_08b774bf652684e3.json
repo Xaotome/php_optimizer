@@ -1,0 +1,170 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "test_migration.php",
+            "path": "\/mnt\/c\/wamp64\/www\/php_optimizer\/storage\/uploads\/test_migration_1758481359_71ed6724852ba4ae.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "error",
+                    "message": "Le nom de la classe 'LegacyUser' ne correspond pas au nom du fichier 'test_migration_1758481359_71ed6724852ba4ae'",
+                    "line": 1,
+                    "rule": "PSR-4.class_name",
+                    "suggestion": "Renommez la classe ou le fichier pour qu'ils correspondent"
+                },
+                {
+                    "severity": "error",
+                    "message": "Certaines propriétés ou méthodes n'ont pas de visibilité déclarée",
+                    "line": 1,
+                    "rule": "PSR-12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected à toutes les propriétés et méthodes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 9,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "Remplacez @param par des union types natifs (PHP 8.0+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 13,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "Les Enums offrent une meilleure structure pour les constantes (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 14,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "Les Enums offrent une meilleure structure pour les constantes (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser des Enums pour les constantes liées",
+                    "line": 15,
+                    "rule": "PHP-8.4.enum_usage",
+                    "suggestion": "Les Enums offrent une meilleure structure pour les constantes (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser readonly pour les propriétés immutables",
+                    "line": 18,
+                    "rule": "PHP-8.4.readonly_properties",
+                    "suggestion": "Ajoutez readonly si cette propriété n'est jamais modifiée (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez les union types natifs au lieu de PHPDoc",
+                    "line": 29,
+                    "rule": "PHP-8.4.union_types",
+                    "suggestion": "Remplacez @param par des union types natifs (PHP 8.0+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez str_contains() au lieu de strpos() !== false",
+                    "line": 35,
+                    "rule": "PHP-8.4.str_contains",
+                    "suggestion": "Remplacez par str_contains() (PHP 8.0+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser match() pour des correspondances simples",
+                    "line": 40,
+                    "rule": "PHP-8.4.match_expression",
+                    "suggestion": "match() offre une syntaxe plus concise que switch (PHP 8.0+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisez array_is_list() pour vérifier si un tableau est une liste",
+                    "line": 55,
+                    "rule": "PHP-8.4.array_is_list",
+                    "suggestion": "Remplacez par array_is_list($array) (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser Fibers pour la programmation asynchrone",
+                    "line": 64,
+                    "rule": "PHP-8.4.fibers",
+                    "suggestion": "Fibers permet une programmation asynchrone native (PHP 8.1+)",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 10,
+                "by_category": {
+                    "migration": 10
+                },
+                "php_versions": {
+                    "8.4": 10
+                },
+                "complexity": "medium"
+            },
+            "metrics": {
+                "total_issues": 12,
+                "errors": 2,
+                "warnings": 0,
+                "info": 10,
+                "migration_suggestions": 10
+            }
+        }
+    ]
+}

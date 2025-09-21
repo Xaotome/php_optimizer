@@ -5,7 +5,8 @@ class PhpOptimizerApp {
         this.activeFilters = {
             error: true,
             warning: true,
-            info: true
+            info: true,
+            migration: true
         };
         
         // Détecter le chemin de base automatiquement
@@ -191,7 +192,7 @@ class PhpOptimizerApp {
         const totalStats = this.calculateTotalStats(data.files);
         
         let html = `
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
                 <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
                     <i class="fas fa-check-circle text-3xl text-green-600 mb-2"></i>
                     <h3 class="text-lg font-semibold text-green-800">Fichiers conformes</h3>
@@ -211,6 +212,11 @@ class PhpOptimizerApp {
                     <i class="fas fa-info-circle text-3xl text-blue-600 mb-2"></i>
                     <h3 class="text-lg font-semibold text-blue-800">Informations</h3>
                     <p class="text-2xl font-bold text-blue-600" id="infoCount">${totalStats.info}</p>
+                </div>
+                <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                    <i class="fas fa-rocket text-3xl text-purple-600 mb-2"></i>
+                    <h3 class="text-lg font-semibold text-purple-800">Migration PHP 8.4</h3>
+                    <p class="text-2xl font-bold text-purple-600" id="migrationCount">${totalStats.migration}</p>
                 </div>
             </div>
         `;
@@ -238,6 +244,12 @@ class PhpOptimizerApp {
                         <input type="checkbox" id="filterInfo" class="severity-filter mr-2" data-severity="info" checked>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                             <i class="fas fa-info-circle mr-1"></i> Informations (<span id="filterInfoCount">${totalStats.info}</span>)
+                        </span>
+                    </label>
+                    <label class="flex items-center cursor-pointer">
+                        <input type="checkbox" id="filterMigration" class="severity-filter mr-2" data-severity="migration" checked>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                            <i class="fas fa-rocket mr-1"></i> Migration PHP 8.4 (<span id="filterMigrationCount">${totalStats.migration}</span>)
                         </span>
                     </label>
                     <button id="toggleAllFilters" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 text-sm">
@@ -281,27 +293,74 @@ class PhpOptimizerApp {
                 <div class="p-6">
         `;
 
+        // Afficher le résumé de migration s'il existe
+        if (file.migration_summary && file.migration_summary.total_suggestions > 0) {
+            const complexity = file.migration_summary.complexity;
+            const complexityColor = complexity === 'high' ? 'red' : complexity === 'medium' ? 'yellow' : 'green';
+            const complexityIcon = complexity === 'high' ? 'exclamation-triangle' : complexity === 'medium' ? 'clock' : 'check-circle';
+
+            html += `
+                <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
+                    <h4 class="text-md font-semibold text-purple-800 mb-3">
+                        <i class="fas fa-rocket mr-2"></i>Résumé de migration PHP 8.4
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-purple-600">${file.migration_summary.total_suggestions}</p>
+                            <p class="text-sm text-purple-700">Suggestions</p>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-${complexityColor}-100 text-${complexityColor}-800">
+                                <i class="fas fa-${complexityIcon} mr-1"></i>
+                                Complexité ${complexity}
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            ${Object.entries(file.migration_summary.by_category || {}).map(([cat, count]) =>
+                                `<span class="inline-block px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded mr-1">${cat}: ${count}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         if (file.issues.length > 0) {
             html += '<h4 class="text-md font-semibold mb-4">Problèmes détectés:</h4>';
             html += '<div class="space-y-2">';
             
             file.issues.forEach((issue, issueIndex) => {
-                const severityClass = issue.severity === 'error' ? 'border-red-200 bg-red-50' :
+                const isMigration = issue.category === 'migration';
+                const severityClass = isMigration ? 'border-purple-200 bg-purple-50' :
+                                     issue.severity === 'error' ? 'border-red-200 bg-red-50' :
                                      issue.severity === 'warning' ? 'border-yellow-200 bg-yellow-50' :
                                      'border-blue-200 bg-blue-50';
-                
+
+                const severityBadge = isMigration ? 'bg-purple-200 text-purple-800' :
+                                     issue.severity === 'error' ? 'bg-red-200 text-red-800' :
+                                     issue.severity === 'warning' ? 'bg-yellow-200 text-yellow-800' :
+                                     'bg-blue-200 text-blue-800';
+
+                const severityText = isMigration ? 'PHP 8.4' : issue.severity.toUpperCase();
+                const severityIcon = isMigration ? 'fas fa-rocket' :
+                                    issue.severity === 'error' ? 'fas fa-times-circle' :
+                                    issue.severity === 'warning' ? 'fas fa-exclamation-triangle' :
+                                    'fas fa-info-circle';
+
+                const dataAttr = isMigration ? 'migration' : issue.severity;
+
                 html += `
-                    <div class="issue-item border ${severityClass} rounded p-3" data-severity="${issue.severity}" data-file-index="${fileIndex}" data-issue-index="${issueIndex}">
+                    <div class="issue-item border ${severityClass} rounded p-3" data-severity="${dataAttr}" data-file-index="${fileIndex}" data-issue-index="${issueIndex}">
                         <div class="flex items-start">
-                            <span class="px-2 py-1 text-xs rounded font-semibold mr-3 ${
-                                issue.severity === 'error' ? 'bg-red-200 text-red-800' :
-                                issue.severity === 'warning' ? 'bg-yellow-200 text-yellow-800' :
-                                'bg-blue-200 text-blue-800'
-                            }">${issue.severity.toUpperCase()}</span>
+                            <span class="px-2 py-1 text-xs rounded font-semibold mr-3 ${severityBadge}">
+                                <i class="${severityIcon} mr-1"></i>${severityText}
+                            </span>
                             <div class="flex-1">
                                 <p class="font-medium">${issue.message}</p>
                                 <p class="text-sm text-gray-600">Ligne ${issue.line} - ${issue.rule}</p>
                                 ${issue.suggestion ? `<p class="text-sm text-green-600 mt-1"><i class="fas fa-lightbulb"></i> ${issue.suggestion}</p>` : ''}
+                                ${issue.php_version ? `<p class="text-xs text-purple-600 mt-1"><i class="fas fa-code"></i> Compatible PHP ${issue.php_version}</p>` : ''}
+                                ${issue.diff ? `<pre class="text-xs bg-gray-100 p-2 mt-2 rounded overflow-x-auto"><code>${issue.diff}</code></pre>` : ''}
                             </div>
                         </div>
                     </div>
@@ -348,16 +407,22 @@ class PhpOptimizerApp {
     }
 
     calculateTotalStats(files) {
-        const stats = { errors: 0, warnings: 0, info: 0 };
-        
+        const stats = { errors: 0, warnings: 0, info: 0, migration: 0 };
+
         files.forEach(file => {
             file.issues.forEach(issue => {
-                if (issue.severity === 'error') stats.errors++;
-                else if (issue.severity === 'warning') stats.warnings++;
-                else if (issue.severity === 'info') stats.info++;
+                if (issue.category === 'migration') {
+                    stats.migration++;
+                } else if (issue.severity === 'error') {
+                    stats.errors++;
+                } else if (issue.severity === 'warning') {
+                    stats.warnings++;
+                } else if (issue.severity === 'info') {
+                    stats.info++;
+                }
             });
         });
-        
+
         return stats;
     }
 
