@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f35 50%, #0f1520 100%);
+            background-attachment: fixed;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass-card {
+            background: rgba(26, 31, 53, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .php-tag {
+            color: #8b5cf6;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        nav {
+            background: rgba(15, 20, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        input {
+            background: rgba(15, 20, 32, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+            outline: none;
+            background: rgba(15, 20, 32, 0.7);
+        }
+
+        input::placeholder {
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="shadow-lg shadow-purple-900/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">
+                        <span class="php-tag">&lt;?php</span>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">PHP Optimizer</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="./" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="./register.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-md mx-auto">
+            <!-- Login card -->
+            <div class="glass-card rounded-lg shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <div class="mb-4">
+                        <span class="text-4xl php-tag">&lt;?php</span>
+                    </div>
+                    <h1 class="text-3xl font-bold mb-2">
+                        <span class="gradient-text">Login</span>
+                    </h1>
+                    <p class="text-gray-400 mono text-sm">// Access your account</p>
+                </div>
+
+                <!-- Error message -->
+                <div id="errorMessage" class="hidden bg-red-900/30 border border-red-500/50 text-red-300 px-4 py-3 rounded-lg mb-4">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="errorText"></span>
+                </div>
+
+                <!-- Success message -->
+                <div id="successMessage" class="hidden bg-emerald-900/30 border border-emerald-500/50 text-emerald-300 px-4 py-3 rounded-lg mb-4">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="successText"></span>
+                </div>
+
+                <!-- Form -->
+                <form id="loginForm" class="space-y-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-envelope text-cyan-400"></i> <span class="mono">Email</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full px-4 py-3 rounded-lg mono"
+                            placeholder="dev@example.com"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-lock text-purple-400"></i> <span class="mono">Password</span>
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                            class="w-full px-4 py-3 rounded-lg mono"
+                            placeholder="••••••••"
+                        >
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="w-full btn-primary text-white py-3 px-6 rounded-lg font-semibold"
+                    >
+                        <i class="fas fa-sign-in-alt"></i> Log in
+                    </button>
+                </form>
+
+                <!-- Links -->
+                <div class="mt-6 text-center text-sm text-gray-400">
+                    <p class="mono">
+                        Don't have an account?
+                        <a href="./register.html" class="text-purple-400 hover:text-purple-300 font-semibold">
+                            Create account
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Free plan info -->
+            <div class="mt-8 glass-card rounded-lg p-4 text-center border-cyan-500/30">
+                <p class="text-sm text-cyan-300 mono">
+                    <i class="fas fa-gift"></i>
+                    <strong>20 free files</strong> per month to get started!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+        const successMessage = document.getElementById('successMessage');
+        const successText = document.getElementById('successText');
+
+        const basePath = window.location.pathname.includes('/php_optimizer/') ? '/php_optimizer/public' : '';
+
+        function showError(message) {
+            errorText.textContent = message;
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+        }
+
+        function showSuccess(message) {
+            successText.textContent = message;
+            successMessage.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
+        }
+
+        function hideMessages() {
+            errorMessage.classList.add('hidden');
+            successMessage.classList.add('hidden');
+        }
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hideMessages();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+
+            try {
+                const response = await fetch(basePath + '/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showSuccess('Login successful! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = './dashboard.html';
+                    }, 1000);
+                } else {
+                    showError(data.error || 'Login error');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Log in';
+                }
+            } catch (error) {
+                showError('Server connection error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Log in';
+            }
+        });
+
+        // Check if already logged in
+        fetch(basePath + '/api/auth/check')
+            .then(res => res.json())
+            .then(data => {
+                if (data.authenticated) {
+                    window.location.href = './dashboard.html';
+                }
+            });
+    </script>
+</body>
+</html>

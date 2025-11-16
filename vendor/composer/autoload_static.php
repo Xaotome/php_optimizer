@@ -2755,6 +2755,7 @@ class ComposerStaticInitb403f2f5448ae60c4da0170882d54080
         'PhpOptimizer\\Analyzers\\CsFixerAnalyzer' => __DIR__ . '/../..' . '/src/Analyzers/CsFixerAnalyzer.php',
         'PhpOptimizer\\Analyzers\\PhpStanAnalyzer' => __DIR__ . '/../..' . '/src/Analyzers/PhpStanAnalyzer.php',
         'PhpOptimizer\\Analyzers\\PsrAnalyzer' => __DIR__ . '/../..' . '/src/Analyzers/PsrAnalyzer.php',
+        'PhpOptimizer\\Analyzers\\RectorAnalyzer' => __DIR__ . '/../..' . '/src/Analyzers/RectorAnalyzer.php',
         'PhpOptimizer\\Controllers\\AnalysisController' => __DIR__ . '/../..' . '/src/Controllers/AnalysisController.php',
         'PhpOptimizer\\Controllers\\UploadController' => __DIR__ . '/../..' . '/src/Controllers/UploadController.php',
         'PhpOptimizer\\Models\\ResponseModel' => __DIR__ . '/../..' . '/src/Models/ResponseModel.php',

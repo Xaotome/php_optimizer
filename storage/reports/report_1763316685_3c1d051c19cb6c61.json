@@ -1,0 +1,1338 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 2,
+        "total_files": 2
+    },
+    "files": [
+        {
+            "name": "session.php",
+            "path": "C:\\wamp64\\www\\php_optimizer\/storage\/uploads\/session_1763316685_a108f97d3573b51b.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 16,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 20,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 25,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 29,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 30,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": true,
+                    "issues_count": 0
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 2,
+                "by_category": {
+                    "migration": 2
+                },
+                "php_versions": {
+                    "8.4": 2
+                },
+                "complexity": "low"
+            },
+            "metrics": {
+                "total_issues": 5,
+                "errors": 2,
+                "warnings": 0,
+                "info": 3,
+                "migration_suggestions": 2
+            }
+        },
+        {
+            "name": "index.php",
+            "path": "C:\\wamp64\\www\\php_optimizer\/storage\/uploads\/index_1763316685_fe9e2890a7d52bb4.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 273,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 282,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 284,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 293,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 296,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 305,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 307,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 316,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 319,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 330,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 341,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 343,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration de namespace manquante",
+                    "line": 1,
+                    "rule": "PSR-4.namespace",
+                    "suggestion": "Ajoutez une déclaration de namespace"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Les déclarations use ne sont pas triées alphabétiquement",
+                    "line": 1,
+                    "rule": "PSR-12.imports",
+                    "suggestion": "Triez les déclarations use par ordre alphabétique"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 28,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 39,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 43,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 44,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 51,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 53,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 54,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 55,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 58,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 59,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 65,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 68,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 69,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 70,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 71,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 72,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 73,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 74,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 82,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 89,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 92,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 94,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 97,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 99,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 103,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 106,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 108,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 111,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 113,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 117,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 120,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 122,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 125,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 127,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 131,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 134,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 136,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 139,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 141,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 145,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 148,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 150,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 153,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 155,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 163,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 166,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 168,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 169,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 172,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 174,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 178,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 181,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 183,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 184,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 187,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 189,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 193,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 196,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 198,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 199,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 202,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 204,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 208,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 211,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 213,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 214,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 222,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 225,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 227,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 230,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 232,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 236,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 239,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 241,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 242,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 245,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 247,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 248,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 249,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 252,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 256,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 259,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 261,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 264,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 266,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 270,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 272,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 275,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 280,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 286,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 291,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 298,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 303,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 309,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 314,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 331,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 342,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 345,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 346,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 349,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 351,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 356,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 360,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "error",
+                    "message": "each() est déprécié depuis PHP 7.2",
+                    "line": 321,
+                    "rule": "PHPStan.deprecated_function",
+                    "suggestion": "Utilisez foreach() ou des alternatives modernes"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 13,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 168,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 183,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 198,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 213,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 241,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Utilisation de array() au lieu de la syntaxe courte []",
+                    "line": 297,
+                    "rule": "CS-Fixer.array_syntax",
+                    "suggestion": "Remplacez array() par [] pour une syntaxe plus moderne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 326,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 345,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 16,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "error",
+                    "message": "Propriété sans modificateur de visibilité",
+                    "line": 357,
+                    "rule": "CodeSniffer.PSR12.visibility",
+                    "suggestion": "Ajoutez public, private ou protected"
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 37,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 47,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 48,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 51,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 53,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 58,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 68,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 89,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 103,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 117,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 131,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 145,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 163,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 178,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 193,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 208,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 222,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 236,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 256,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 259,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 270,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 356,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": true,
+                    "issues_count": 0
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": false,
+                    "issues_count": 12
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": false,
+                    "issues_count": 1
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 22,
+                "by_category": {
+                    "migration": 22
+                },
+                "php_versions": {
+                    "8.4": 22
+                },
+                "complexity": "high"
+            },
+            "metrics": {
+                "total_issues": 151,
+                "errors": 4,
+                "warnings": 2,
+                "info": 145,
+                "migration_suggestions": 22
+            }
+        }
+    ]
+}

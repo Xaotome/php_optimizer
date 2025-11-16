@@ -20,6 +20,8 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 use PhpOptimizer\Controllers\UploadController;
 use PhpOptimizer\Controllers\AnalysisController;
+use PhpOptimizer\Controllers\AuthController;
+use PhpOptimizer\Controllers\SubscriptionController;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 try {
@@ -30,33 +32,10 @@ try {
 
 $app = AppFactory::create();
 
-// Set base path for subdirectory deployment
-$basePath = '';
-
-// Détecter le base path de plusieurs façons
-if (isset($_SERVER['SCRIPT_NAME'])) {
-    $scriptDir = dirname($_SERVER['SCRIPT_NAME']);
-    if ($scriptDir !== '/' && $scriptDir !== '.') {
-        $basePath = $scriptDir;
-    }
-}
-
-// Méthode alternative pour la détection
-if (empty($basePath) && isset($_SERVER['REQUEST_URI']) && isset($_SERVER['SCRIPT_NAME'])) {
-    $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $scriptPath = dirname($_SERVER['SCRIPT_NAME']);
-
-    if ($scriptPath !== '/' && strpos($requestPath, $scriptPath) === 0) {
-        $basePath = $scriptPath;
-    }
-}
-
-// Forcer le base path si on est dans php_optimizer
-if (strpos($_SERVER['REQUEST_URI'] ?? '', '/php_optimizer') !== false) {
-    $basePath = '/php_optimizer';
-}
-
-if (!empty($basePath)) {
+// Détection automatique du basePath
+$scriptName = parse_url($_SERVER['SCRIPT_NAME'], PHP_URL_PATH);
+$basePath = str_replace('/index.php', '', $scriptName);
+if ($basePath !== '') {
     $app->setBasePath($basePath);
 }
 
@@ -72,7 +51,7 @@ $app->add(function (Request $request, $handler) {
 $app->addErrorMiddleware(true, true, true);
 
 $app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write(file_get_contents(__DIR__ . '/index.html'));
+    $response->getBody()->write(file_get_contents(__DIR__ . '/home.html'));
     return $response->withHeader('Content-Type', 'text/html');
 });
 
@@ -102,6 +81,143 @@ $app->get('/debug', function (Request $request, Response $response) {
     ], JSON_PRETTY_PRINT));
     return $response->withHeader('Content-Type', 'application/json');
 });
+
+// ========================================
+// Routes d'authentification
+// ========================================
+
+$app->post('/api/register', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->register($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'REGISTER_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->post('/api/login', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->login($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'LOGIN_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->post('/api/logout', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->logout($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'LOGOUT_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->get('/api/me', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->me($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'ME_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->get('/api/auth/check', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->checkAuth($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'AUTH_CHECK_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+// ========================================
+// Routes d'abonnement (Stripe)
+// ========================================
+
+$app->post('/api/subscription/create-checkout', function (Request $request, Response $response) {
+    try {
+        $controller = new SubscriptionController();
+        return $controller->createCheckoutSession($request, $response);
+    } catch (Exception $e) {
+        error_log("Checkout error: " . $e->getMessage());
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'CHECKOUT_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->post('/api/subscription/cancel', function (Request $request, Response $response) {
+    try {
+        $controller = new SubscriptionController();
+        return $controller->cancelSubscription($request, $response);
+    } catch (Exception $e) {
+        error_log("Cancel subscription error: " . $e->getMessage());
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'CANCEL_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->post('/api/subscription/portal', function (Request $request, Response $response) {
+    try {
+        $controller = new SubscriptionController();
+        return $controller->createPortalSession($request, $response);
+    } catch (Exception $e) {
+        error_log("Portal error: " . $e->getMessage());
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'PORTAL_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
+$app->post('/api/webhooks/stripe', function (Request $request, Response $response) {
+    try {
+        $controller = new SubscriptionController();
+        return $controller->handleWebhook($request, $response);
+    } catch (Exception $e) {
+        error_log("Webhook error: " . $e->getMessage());
+        return $response->withStatus(500);
+    }
+});
+
+// ========================================
+// Routes d'analyse (existantes)
+// ========================================
 
 $app->post('/upload', function (Request $request, Response $response) {
     try {
@@ -154,7 +270,7 @@ $app->get('/report/{id}', function (Request $request, Response $response, array 
 $app->post('/admin/cleanup', function (Request $request, Response $response) {
     try {
         $data = json_decode($request->getBody()->getContents(), true);
-        
+
         if (!isset($data['password']) || !isset($data['target'])) {
             $response->getBody()->write(json_encode([
                 'success' => false,
@@ -163,9 +279,9 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             ]));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
         }
-        
+
         $expectedHash = '$2y$10$fHW5MJBXnbNi1TP.TqMe6.15oyYN1y0/owLUM5mp1HE3AYiJ/aksO';
-        
+
         if (!password_verify($data['password'], $expectedHash)) {
             $response->getBody()->write(json_encode([
                 'success' => false,
@@ -174,10 +290,10 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             ]));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(401);
         }
-        
+
         $target = $data['target'];
         $allowedTargets = ['uploads', 'reports'];
-        
+
         if (!in_array($target, $allowedTargets)) {
             $response->getBody()->write(json_encode([
                 'success' => false,
@@ -186,9 +302,9 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             ]));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
         }
-        
+
         $targetDir = dirname(__DIR__) . "/storage/$target";
-        
+
         if (!is_dir($targetDir)) {
             $response->getBody()->write(json_encode([
                 'success' => false,
@@ -197,10 +313,10 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             ]));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
         }
-        
+
         $deletedFiles = 0;
         $errors = [];
-        
+
         $files = glob($targetDir . '/*');
         foreach ($files as $file) {
             if (is_file($file)) {
@@ -211,7 +327,7 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
                 }
             }
         }
-        
+
         $response->getBody()->write(json_encode([
             'success' => true,
             'message' => "Nettoyage du dossier $target terminé",
@@ -222,9 +338,9 @@ $app->post('/admin/cleanup', function (Request $request, Response $response) {
             ],
             'timestamp' => date('c')
         ]));
-        
+
         return $response->withHeader('Content-Type', 'application/json');
-        
+
     } catch (Exception $e) {
         error_log("Erreur cleanup: " . $e->getMessage());
         $response->getBody()->write(json_encode([

@@ -42,9 +42,12 @@ class AnalysisService
             'files' => []
         ];
 
+        $uploadedFilePaths = [];
+
         foreach ($files as $fileData) {
             $filePath = $fileData['path'];
             $fileName = $fileData['original_name'];
+            $uploadedFilePaths[] = $filePath; // Garder trace pour nettoyage
 
             try {
                 $fileAnalysis = $this->analyzeFile($filePath, $fileName);
@@ -80,6 +83,16 @@ class AnalysisService
 
         $reportId = $this->saveReport($results);
         $results['report_id'] = $reportId;
+
+        // RGPD: Supprimer immédiatement les fichiers uploadés après l'analyse
+        $this->cleanupUploadedFiles($uploadedFilePaths);
+
+        // Ajouter un message de confirmation de suppression dans les résultats
+        $results['privacy'] = [
+            'files_deleted' => true,
+            'files_count' => count($uploadedFilePaths),
+            'message' => 'Vos fichiers ont été automatiquement supprimés de nos serveurs (conformité RGPD)'
+        ];
 
         return $results;
     }
@@ -168,5 +181,43 @@ class AnalysisService
         if (!is_dir($this->reportsDirectory)) {
             mkdir($this->reportsDirectory, 0755, true);
         }
+    }
+
+    /**
+     * Supprime les fichiers uploadés pour conformité RGPD
+     */
+    private function cleanupUploadedFiles(array $filePaths): void
+    {
+        foreach ($filePaths as $filePath) {
+            if (file_exists($filePath)) {
+                try {
+                    unlink($filePath);
+                    error_log("RGPD Cleanup: Fichier supprimé - " . basename($filePath));
+                } catch (\Exception $e) {
+                    error_log("RGPD Cleanup Error: Impossible de supprimer " . basename($filePath) . " - " . $e->getMessage());
+                }
+            }
+        }
+    }
+
+    /**
+     * Supprime un rapport spécifique (pour conformité RGPD)
+     */
+    public function cleanupReport(string $reportId): bool
+    {
+        $reportPath = $this->reportsDirectory . $reportId . '.json';
+
+        if (file_exists($reportPath)) {
+            try {
+                unlink($reportPath);
+                error_log("RGPD Cleanup: Rapport supprimé - " . $reportId);
+                return true;
+            } catch (\Exception $e) {
+                error_log("RGPD Cleanup Error: Impossible de supprimer le rapport " . $reportId . " - " . $e->getMessage());
+                return false;
+            }
+        }
+
+        return false;
     }
 }

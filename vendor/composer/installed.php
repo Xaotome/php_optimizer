@@ -3,7 +3,7 @@
         'name' => 'php-optimizer/saas',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e73dc7a3c1987b18c1d7b7b848365faf1bb2b203',
+        'reference' => '52b24d0aab0c026cbaf7b61bf9b7a2db20e4663d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -193,7 +193,7 @@
         'php-optimizer/saas' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e73dc7a3c1987b18c1d7b7b848365faf1bb2b203',
+            'reference' => '52b24d0aab0c026cbaf7b61bf9b7a2db20e4663d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

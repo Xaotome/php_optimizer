@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Activated - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f35 50%, #0f1520 100%);
+            background-attachment: fixed;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass-card {
+            background: rgba(26, 31, 53, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .php-tag {
+            color: #8b5cf6;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        nav {
+            background: rgba(15, 20, 32, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+            transform: translateY(-2px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.8); }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            animation: confetti-fall 3s ease-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="shadow-lg shadow-purple-900/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">
+                        <span class="php-tag">&lt;?php</span>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">PHP Optimizer</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="./" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="./analyzer.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-search"></i> Analyze
+                    </a>
+                    <a href="./dashboard.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-2xl mx-auto">
+            <!-- Success Card -->
+            <div class="glass-card rounded-2xl shadow-2xl p-12 text-center">
+                <!-- Success Icon -->
+                <div class="mb-8">
+                    <div class="w-32 h-32 bg-emerald-900/30 border-2 border-emerald-500/50 rounded-full flex items-center justify-center mx-auto float-animation pulse-glow">
+                        <i class="fas fa-check-circle text-6xl text-emerald-400"></i>
+                    </div>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <i class="fas fa-crown text-yellow-400"></i>
+                    <span class="gradient-text mono">Success!</span>
+                </h1>
+
+                <p class="text-2xl text-emerald-400 mb-2 mono">
+                    // Welcome to Pro
+                </p>
+
+                <!-- Success Message -->
+                <p class="text-lg text-gray-300 mb-8">
+                    Your subscription has been successfully activated
+                </p>
+
+                <!-- Benefits -->
+                <div class="glass-card border-purple-500/30 rounded-lg p-6 mb-8">
+                    <h2 class="text-lg font-semibold text-white mb-4 mono">
+                        <span class="text-cyan-400">$benefits</span> = [
+                    </h2>
+                    <ul class="text-left space-y-3">
+                        <li class="flex items-center text-gray-200">
+                            <i class="fas fa-infinity text-purple-400 mr-3"></i>
+                            <span class="mono"><strong class="text-cyan-400">'unlimited'</strong> => Unlimited analyses</span>
+                        </li>
+                        <li class="flex items-center text-gray-200">
+                            <i class="fas fa-clock text-cyan-400 mr-3"></i>
+                            <span class="mono"><strong class="text-cyan-400">'support'</strong> => Priority within 24h</span>
+                        </li>
+                        <li class="flex items-center text-gray-200">
+                            <i class="fas fa-history text-emerald-400 mr-3"></i>
+                            <span class="mono"><strong class="text-cyan-400">'history'</strong> => Full history</span>
+                        </li>
+                        <li class="flex items-center text-gray-200">
+                            <i class="fas fa-file-pdf text-pink-400 mr-3"></i>
+                            <span class="mono"><strong class="text-cyan-400">'export'</strong> => PDF & reports</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-400 mono text-left mt-3">];</p>
+                </div>
+
+                <!-- Receipt Info -->
+                <div class="bg-cyan-900/20 border border-cyan-500/30 rounded-lg p-4 mb-8">
+                    <p class="text-sm text-cyan-300 mono">
+                        <i class="fas fa-envelope"></i>
+                        // A confirmation email with your invoice has been sent to you
+                    </p>
+                </div>
+
+                <!-- Actions -->
+                <div class="space-y-4">
+                    <a href="./analyzer.html" class="block w-full btn-primary text-white py-4 px-6 rounded-lg font-semibold text-lg shadow-xl mono">
+                        <i class="fas fa-rocket"></i> Start analyzing
+                    </a>
+                    <a href="./dashboard.html" class="block w-full glass-card border-purple-500/30 text-purple-300 py-3 px-6 rounded-lg hover:border-purple-500/50 hover:bg-purple-900/10 transition-colors font-semibold mono">
+                        <i class="fas fa-tachometer-alt"></i> View my dashboard
+                    </a>
+                    <a href="./subscription.html" class="text-cyan-400 hover:text-cyan-300 text-sm underline mono">
+                        // Manage my subscription
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-8 text-center">
+                <p class="text-gray-400 mb-2 mono">
+                    <i class="fas fa-question-circle"></i> // Need help?
+                </p>
+                <p class="text-sm text-gray-500 mono">
+                    Email:
+                    <a href="mailto:support@php-optimizer.com" class="text-purple-400 hover:underline">
+                        support@php-optimizer.com
+                    </a>
+                </p>
+            </div>
+
+            <!-- GDPR Info -->
+            <div class="mt-8 glass-card border-emerald-500/30 rounded-lg p-4">
+                <p class="text-sm text-emerald-400 text-center mono">
+                    <i class="fas fa-shield-alt"></i>
+                    // Your files remain private and are automatically deleted after analysis
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Confetti colors matching theme
+        const colors = ['#8b5cf6', '#22d3ee', '#10b981', '#f59e0b', '#ec4899'];
+
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    confetti.style.width = (Math.random() * 5 + 5) + 'px';
+                    confetti.style.height = confetti.style.width;
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 30);
+            }
+        }
+
+        // Check Stripe session
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+
+        if (sessionId) {
+            console.log('✅ Stripe session ID:', sessionId);
+        }
+
+        // Launch confetti
+        window.addEventListener('load', () => {
+            createConfetti();
+            // Restart after 3 seconds
+            setTimeout(createConfetti, 3000);
+        });
+    </script>
+</body>
+</html>

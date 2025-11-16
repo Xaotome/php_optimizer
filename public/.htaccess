@@ -3,7 +3,7 @@ RewriteEngine On
 # Rediriger toutes les requêtes vers index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^ index.php [QSA,L]
 
 # Headers pour CORS
 Header always set Access-Control-Allow-Origin "*"

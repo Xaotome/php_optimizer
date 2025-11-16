@@ -10,6 +10,7 @@ Un outil SAAS moderne pour analyser et optimiser le code PHP selon les standards
 - **Interface moderne** : Interface web responsive avec rapports détaillés
 - **Upload multiple** : Support pour l'analyse de plusieurs fichiers simultanément
 - **Rapports détaillés** : Codes d'erreur, suggestions d'amélioration et métriques
+- **🔒 Conformité RGPD** : Suppression automatique des fichiers après analyse - Aucune traçabilité
 
 ## Installation
 
@@ -46,16 +47,22 @@ php -S localhost:8000 -t public
 ```
 
 ### Accès à l'application
-Ouvrez votre navigateur et accédez à `http://localhost:8001`
+Ouvrez votre navigateur et accédez à `http://localhost:8000`
+
+### Structure de l'application
+- **Page d'accueil** (`/`) : Présentation de l'application et de ses fonctionnalités
+- **Analyseur** (`/analyzer.html`) : Interface d'upload et d'analyse de fichiers
 
 ### Analyse de fichiers
-1. Sélectionnez ou glissez-déposez vos fichiers PHP
-2. Cliquez sur "Analyser les fichiers"
-3. Consultez les rapports détaillés avec :
+1. Accédez à la page "Analyser mon code"
+2. Sélectionnez ou glissez-déposez vos fichiers PHP
+3. Cliquez sur "Analyser les fichiers"
+4. Consultez les rapports détaillés avec :
    - Conformité PSR
    - Erreurs, avertissements et informations
    - Suggestions d'amélioration contextuelles
    - Métriques de qualité par fichier
+5. **🔒 Vos fichiers sont automatiquement supprimés après l'analyse** (conformité RGPD)
 
 ### Filtres par sévérité
 - **Filtrez les résultats** par type de problème :
@@ -185,12 +192,20 @@ Modifiez les fichiers de configuration :
 - `.php-cs-fixer.php` : Règles PHP-CS-Fixer
 - `phpstan.neon` : Configuration PHPStan
 
-## Sécurité
+## Sécurité et RGPD
 
+### Sécurité
 - Validation stricte des fichiers uploadés
 - Limite de taille et de nombre de fichiers
 - Noms de fichiers uniques avec timestamp
 - Répertoires temporaires sécurisés
+
+### Conformité RGPD
+- ✅ **Suppression automatique** : Tous les fichiers uploadés sont supprimés immédiatement après l'analyse
+- ✅ **Aucune traçabilité** : Aucun historique n'est conservé
+- ✅ **Aucun stockage permanent** : Les rapports d'analyse ne sont pas sauvegardés après affichage
+- ✅ **Confidentialité totale** : Votre code reste privé et n'est jamais conservé sur nos serveurs
+- ✅ **Logs sécurisés** : Seuls les événements de suppression sont enregistrés (sans contenu)
 
 ## Licence
 

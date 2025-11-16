@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzer - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f35 50%, #0f1520 100%);
+            background-attachment: fixed;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass-card {
+            background: rgba(26, 31, 53, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .php-tag {
+            color: #8b5cf6;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        nav {
+            background: rgba(15, 20, 32, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .filter-hidden {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        .filter-visible {
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        #uploadZone {
+            border: 2px dashed rgba(139, 92, 246, 0.3);
+            background: rgba(26, 31, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #uploadZone:hover {
+            border-color: rgba(139, 92, 246, 0.6);
+            background: rgba(139, 92, 246, 0.1);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+        }
+
+        .file-item {
+            background: rgba(26, 31, 53, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .file-item:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            background: rgba(26, 31, 53, 0.7);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 shadow-lg shadow-purple-900/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">
+                        <span class="php-tag">&lt;?php</span>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">PHP Optimizer</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="./" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="./analyzer.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">
+                        <i class="fas fa-search"></i> Analyze
+                    </a>
+                    <a href="./dashboard.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <span id="userEmailNav" class="text-gray-300 font-medium mono text-sm"></span>
+                    <button id="logoutBtn" class="text-red-400 hover:text-red-300 transition-colors">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <span class="php-tag mono">analyze()</span>
+            </h1>
+            <p class="text-xl text-gray-300 mono">// Upload your PHP files for complete analysis</p>
+
+            <!-- Quotas and GDPR -->
+            <div class="mt-8 max-w-3xl mx-auto space-y-4">
+                <!-- Quota Banner -->
+                <div id="quotaBanner" class="hidden glass-card rounded-lg p-4 border-cyan-500/30">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-chart-pie text-cyan-400 text-2xl"></i>
+                            <div class="text-left">
+                                <p class="text-sm text-cyan-300 font-semibold mono">
+                                    Usage this month
+                                </p>
+                                <p class="text-xs text-gray-400 mono">
+                                    <span id="quotaUsed" class="text-purple-400">0</span> /
+                                    <span id="quotaLimit" class="text-cyan-400">20</span> files •
+                                    <span id="quotaRemaining" class="text-emerald-400">20</span> remaining
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./dashboard.html" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold mono">
+                            Details →
+                        </a>
+                    </div>
+                    <!-- Progress bar -->
+                    <div class="mt-3 w-full bg-gray-800/50 rounded-full h-2 overflow-hidden border border-purple-900/30">
+                        <div id="quotaProgressBar" class="h-2 transition-all duration-300" style="width: 0%; background: linear-gradient(90deg, #8b5cf6 0%, #22d3ee 100%);"></div>
+                    </div>
+                </div>
+
+                <!-- Quota exceeded alert -->
+                <div id="quotaExceededBanner" class="hidden bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-exclamation-circle text-red-400 text-2xl"></i>
+                        <div class="text-left">
+                            <p class="text-sm text-red-300 font-semibold mono">
+                                Monthly quota reached!
+                            </p>
+                            <p class="text-xs text-red-400/80 mono">
+                                Upgrade to <strong class="text-purple-400">Pro (5€/month)</strong> for unlimited analyses.
+                                <a href="./pricing.html" class="underline font-semibold hover:text-red-300">Upgrade →</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GDPR Notice -->
+                <div class="glass-card rounded-lg p-4 border-emerald-500/30">
+                    <div class="flex items-center justify-center space-x-3">
+                        <i class="fas fa-shield-alt text-emerald-400 text-2xl"></i>
+                        <div class="text-left">
+                            <p class="text-sm text-emerald-300 font-semibold mono">
+                                <i class="fas fa-check-circle"></i> GDPR Protection Active
+                            </p>
+                            <p class="text-xs text-emerald-400/70 mono">
+                                // Your files will be automatically deleted after analysis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-lg shadow-xl p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-upload text-emerald-400 mr-2"></i>
+                    <span class="mono text-white">Upload Files</span>
+                </h2>
+
+                <div id="uploadZone" class="rounded-lg p-12 text-center cursor-pointer">
+                    <i class="fas fa-cloud-upload-alt text-5xl text-purple-400 mb-4"></i>
+                    <p class="text-lg text-gray-300 mb-2 mono">Drag and drop your <span class="text-cyan-400">.php</span> files here</p>
+                    <p class="text-sm text-gray-500 mono">// or click to select</p>
+                    <input type="file" id="fileInput" multiple accept=".php" class="hidden">
+                </div>
+
+                <div id="fileList" class="mt-6 hidden">
+                    <h3 class="text-lg font-semibold mb-4 mono text-cyan-400">
+                        <i class="fas fa-file-code"></i> Selected files:
+                    </h3>
+                    <div id="files" class="space-y-2"></div>
+                </div>
+
+                <button id="analyzeBtn" class="mt-6 w-full btn-primary text-white py-4 px-6 rounded-lg font-semibold text-lg mono disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-search"></i> Analyze files
+                </button>
+
+                <div class="mt-4 glass-card border-cyan-500/30 rounded-lg p-3">
+                    <p class="text-sm text-cyan-300 text-center mono">
+                        <i class="fas fa-info-circle"></i>
+                        // After analysis, all your files will be automatically deleted
+                    </p>
+                </div>
+            </div>
+
+            <div id="results" class="hidden">
+                <div class="glass-card rounded-lg shadow-xl p-8">
+                    <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-chart-bar text-cyan-400 mr-2"></i>
+                        <span class="mono text-white">Results</span>
+                    </h2>
+                    <div id="analysisResults"></div>
+                </div>
+            </div>
+
+            <div id="loading" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+                <div class="glass-card rounded-lg p-12 text-center max-w-md shadow-2xl border-purple-500/30">
+                    <i class="fas fa-spinner fa-spin text-6xl text-purple-400 mb-6"></i>
+                    <p class="text-2xl font-bold gradient-text mb-3 mono">Analysis in progress...</p>
+                    <p class="text-sm text-gray-400 mono">
+                        // Your files will be automatically deleted after
+                    </p>
+                    <div class="mt-6 w-full bg-gray-800/50 rounded-full h-2 overflow-hidden">
+                        <div class="h-2 animate-pulse" style="width: 100%; background: linear-gradient(90deg, #8b5cf6 0%, #22d3ee 100%);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const basePath = window.location.pathname.includes('/php_optimizer/') ? '/php_optimizer/public' : '';
+        let currentUser = null;
+
+        async function checkAuthAndLoadQuotas() {
+            try {
+                const authResponse = await fetch(basePath + '/api/auth/check');
+                const authData = await authResponse.json();
+
+                if (!authData.authenticated) {
+                    window.location.href = './login.html?redirect=analyzer.html';
+                    return false;
+                }
+
+                const userResponse = await fetch(basePath + '/api/me');
+                const userData = await userResponse.json();
+
+                if (userData.success && userData.user) {
+                    currentUser = userData.user;
+                    displayUserInfo(userData.user);
+                    displayQuotas(userData.user);
+                    return true;
+                }
+
+                return false;
+            } catch (error) {
+                console.error('Auth/Quota check error:', error);
+                window.location.href = './login.html';
+                return false;
+            }
+        }
+
+        function displayUserInfo(user) {
+            document.getElementById('userEmailNav').textContent = user.email || '';
+        }
+
+        function displayQuotas(user) {
+            const plan = user.plan || 'free';
+            const filesUsed = parseInt(user.current_files_count) || 0;
+            const remaining = parseInt(user.remaining_files);
+
+            if (plan === 'free') {
+                const limit = 20;
+
+                document.getElementById('quotaBanner').classList.remove('hidden');
+                document.getElementById('quotaUsed').textContent = filesUsed;
+                document.getElementById('quotaLimit').textContent = limit;
+                document.getElementById('quotaRemaining').textContent = remaining;
+
+                const percentage = (filesUsed / limit) * 100;
+                const progressBar = document.getElementById('quotaProgressBar');
+                progressBar.style.width = percentage + '%';
+
+                if (remaining <= 0) {
+                    document.getElementById('quotaExceededBanner').classList.remove('hidden');
+                    document.getElementById('quotaBanner').classList.add('hidden');
+                    progressBar.style.background = 'linear-gradient(90deg, #dc2626 0%, #991b1b 100%)';
+
+                    const analyzeBtn = document.getElementById('analyzeBtn');
+                    if (analyzeBtn) {
+                        analyzeBtn.disabled = true;
+                        analyzeBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                        analyzeBtn.title = 'Monthly quota reached - Upgrade to Pro';
+                    }
+                } else if (percentage >= 75) {
+                    progressBar.style.background = 'linear-gradient(90deg, #eab308 0%, #ca8a04 100%)';
+                }
+            } else {
+                document.getElementById('quotaBanner').classList.remove('hidden');
+                document.getElementById('quotaUsed').textContent = filesUsed;
+                document.getElementById('quotaLimit').textContent = '∞';
+                document.getElementById('quotaRemaining').textContent = '∞';
+                document.getElementById('quotaProgressBar').style.width = '100%';
+                document.getElementById('quotaProgressBar').style.background = 'linear-gradient(90deg, #10b981 0%, #059669 100%)';
+            }
+        }
+
+        document.getElementById('logoutBtn').addEventListener('click', async () => {
+            try {
+                await fetch(basePath + '/api/logout', { method: 'POST' });
+                window.location.href = './login.html';
+            } catch (error) {
+                console.error('Logout error:', error);
+                window.location.href = './login.html';
+            }
+        });
+
+        checkAuthAndLoadQuotas();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

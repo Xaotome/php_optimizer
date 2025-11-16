@@ -2417,6 +2417,7 @@ return array(
     'PhpOptimizer\\Analyzers\\CsFixerAnalyzer' => $baseDir . '/src/Analyzers/CsFixerAnalyzer.php',
     'PhpOptimizer\\Analyzers\\PhpStanAnalyzer' => $baseDir . '/src/Analyzers/PhpStanAnalyzer.php',
     'PhpOptimizer\\Analyzers\\PsrAnalyzer' => $baseDir . '/src/Analyzers/PsrAnalyzer.php',
+    'PhpOptimizer\\Analyzers\\RectorAnalyzer' => $baseDir . '/src/Analyzers/RectorAnalyzer.php',
     'PhpOptimizer\\Controllers\\AnalysisController' => $baseDir . '/src/Controllers/AnalysisController.php',
     'PhpOptimizer\\Controllers\\UploadController' => $baseDir . '/src/Controllers/UploadController.php',
     'PhpOptimizer\\Models\\ResponseModel' => $baseDir . '/src/Models/ResponseModel.php',

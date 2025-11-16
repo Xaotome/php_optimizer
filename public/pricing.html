@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f35 50%, #0f1520 100%);
+            background-attachment: fixed;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass-card {
+            background: rgba(26, 31, 53, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .php-tag {
+            color: #8b5cf6;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        nav {
+            background: rgba(15, 20, 32, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .pricing-card-pro {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+            border: 2px solid;
+            border-image: linear-gradient(135deg, #8b5cf6, #22d3ee) 1;
+        }
+
+        .pro-badge {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 shadow-lg shadow-purple-900/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">
+                        <span class="php-tag">&lt;?php</span>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">PHP Optimizer</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="./" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="./analyzer.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-search"></i> Analyze
+                    </a>
+
+                    <!-- Guest menu -->
+                    <div id="guestMenu" class="flex items-center space-x-4">
+                        <a href="./login.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                        <a href="./register.html" class="btn-primary text-white px-4 py-2 rounded-lg font-medium">
+                            <i class="fas fa-user-plus"></i> Sign Up
+                        </a>
+                    </div>
+
+                    <!-- Logged in menu -->
+                    <div id="userMenu" class="hidden flex items-center space-x-4">
+                        <a href="./dashboard.html" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                        <span id="userEmailNav" class="text-gray-300 font-medium mono text-sm"></span>
+                        <button id="logoutBtn" class="text-red-400 hover:text-red-300 transition-colors">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-16">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <span class="gradient-text">Simple Pricing</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-2 mono">
+                // Choose the plan that fits your needs
+            </p>
+            <p class="text-gray-400">
+                Simple, transparent, no commitment
+            </p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Free Plan -->
+            <div class="glass-card rounded-2xl p-8">
+                <div class="text-center mb-8">
+                    <div class="mb-4">
+                        <span class="text-gray-400 mono text-sm">// plan</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-2 mono">FREE</h2>
+                    <p class="text-gray-400 mb-6">To discover the tool</p>
+                    <div class="mb-4">
+                        <span class="text-5xl font-bold gradient-text mono">0€</span>
+                        <span class="text-gray-400 mono">/month</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mono">// No credit card required</p>
+                </div>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                        <span class="mono"><strong class="text-cyan-400">20 files</strong> per month</span>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                        <span class="mono">Full PSR analysis</span>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                        <span class="mono">PHP 8.4 suggestions</span>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                        <span class="mono">PHPStan level 8</span>
+                    </li>
+                    <li class="flex items-start text-gray-300">
+                        <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                        <span class="mono">Auto-delete (GDPR)</span>
+                    </li>
+                    <li class="flex items-start text-gray-500">
+                        <i class="fas fa-times mr-3 mt-1"></i>
+                        <span class="mono line-through">Priority support</span>
+                    </li>
+                    <li class="flex items-start text-gray-500">
+                        <i class="fas fa-times mr-3 mt-1"></i>
+                        <span class="mono line-through">Full history</span>
+                    </li>
+                </ul>
+
+                <a href="./register.html" class="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-4 px-6 rounded-lg transition-colors font-semibold mono">
+                    Start for free
+                </a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="glass-card pricing-card-pro rounded-2xl p-8 relative">
+                <!-- Pro Badge -->
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span class="pro-badge text-white px-6 py-2 rounded-full text-sm font-bold mono shadow-lg">
+                        ⭐ POPULAR
+                    </span>
+                </div>
+
+                <div class="text-center mb-8 mt-4">
+                    <div class="mb-4">
+                        <span class="gradient-text mono text-sm font-bold">// plan.pro</span>
+                    </div>
+                    <h2 class="text-3xl font-bold gradient-text mb-2 mono">PRO</h2>
+                    <p class="text-gray-300 mb-6">For demanding developers</p>
+                    <div class="mb-4">
+                        <span class="text-5xl font-bold gradient-text mono">5€</span>
+                        <span class="text-gray-400 mono">/month</span>
+                    </div>
+                    <p class="text-sm text-emerald-400 mono">// Cancel anytime</p>
+                </div>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono"><strong class="text-cyan-400">Unlimited analyses</strong> per month</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono">All FREE features</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono"><strong class="text-purple-400">Priority support</strong> within 24h</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono">Full analysis history</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono">PDF report export</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono">API access (coming soon)</span>
+                    </li>
+                    <li class="flex items-start text-gray-200">
+                        <i class="fas fa-check text-cyan-400 mt-1 mr-3"></i>
+                        <span class="mono">Early access to new features</span>
+                    </li>
+                </ul>
+
+                <button id="subscribeBtn" class="block w-full text-center btn-primary text-white py-4 px-6 rounded-lg font-bold text-lg mono shadow-xl">
+                    <i class="fas fa-rocket"></i> Upgrade to Pro
+                </button>
+
+                <p class="text-center text-xs text-gray-500 mt-4 mono">
+                    Secure payment via <strong class="text-purple-400">Stripe</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                <span class="gradient-text mono">FAQ</span>
+            </h2>
+
+            <div class="space-y-4">
+                <div class="glass-card rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-white mb-2 mono flex items-center">
+                        <i class="fas fa-question-circle text-cyan-400 mr-2"></i>
+                        Can I cancel anytime?
+                    </h3>
+                    <p class="text-gray-400 mono text-sm">
+                        Yes, you can cancel your subscription at any time. No commitment.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-white mb-2 mono flex items-center">
+                        <i class="fas fa-question-circle text-cyan-400 mr-2"></i>
+                        Is my data stored?
+                    </h3>
+                    <p class="text-gray-400 mono text-sm">
+                        No! All your files are automatically deleted after analysis (GDPR compliant). No data is retained.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-white mb-2 mono flex items-center">
+                        <i class="fas fa-question-circle text-cyan-400 mr-2"></i>
+                        What payment methods do you accept?
+                    </h3>
+                    <p class="text-gray-400 mono text-sm">
+                        We accept all credit cards via Stripe (Visa, Mastercard, American Express).
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-white mb-2 mono flex items-center">
+                        <i class="fas fa-question-circle text-cyan-400 mr-2"></i>
+                        Can I try before subscribing?
+                    </h3>
+                    <p class="text-gray-400 mono text-sm">
+                        Of course! The free plan lets you test the tool with 20 files per month.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-purple-900/30">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2 text-gray-400 mono">
+                <span class="php-tag">&lt;?php</span> <span class="gradient-text font-semibold">PHP Optimizer</span> - Professional analysis
+            </p>
+            <p class="text-gray-500 text-sm mono">
+                <i class="fas fa-shield-alt text-emerald-400"></i> GDPR Compliant
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const basePath = window.location.pathname.includes('/php_optimizer/') ? '/php_optimizer/public' : '';
+
+        // Check authentication
+        fetch(basePath + '/api/auth/check')
+            .then(res => res.json())
+            .then(data => {
+                if (data.authenticated) {
+                    document.getElementById('guestMenu').classList.add('hidden');
+                    document.getElementById('userMenu').classList.remove('hidden');
+                    document.getElementById('userEmailNav').textContent = data.user_email || '';
+                } else {
+                    document.getElementById('guestMenu').classList.remove('hidden');
+                    document.getElementById('userMenu').classList.add('hidden');
+                }
+            })
+            .catch(err => console.error('Auth check error:', err));
+
+        // Handle logout
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', async () => {
+                try {
+                    await fetch(basePath + '/api/logout', { method: 'POST' });
+                    window.location.reload();
+                } catch (error) {
+                    console.error('Logout error:', error);
+                    window.location.reload();
+                }
+            });
+        }
+
+        // Handle Pro subscription
+        document.getElementById('subscribeBtn').addEventListener('click', async () => {
+            try {
+                // Check if user is logged in
+                const authCheck = await fetch(basePath + '/api/auth/check');
+                const authData = await authCheck.json();
+
+                if (!authData.authenticated) {
+                    // Redirect to login page
+                    window.location.href = './login.html?redirect=pricing';
+                    return;
+                }
+
+                // Create Stripe Checkout session
+                const response = await fetch(basePath + '/api/subscription/create-checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.success && data.data.checkout_url) {
+                    // Redirect to Stripe Checkout
+                    window.location.href = data.data.checkout_url;
+                } else {
+                    alert('Error creating payment session: ' + (data.message || 'Unknown error'));
+                }
+            } catch (error) {
+                console.error('Subscription error:', error);
+                alert('Error creating subscription');
+            }
+        });
+    </script>
+</body>
+</html>
