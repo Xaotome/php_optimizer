@@ -133,7 +133,9 @@ class PhpStanAnalyzer
                 ];
             }
 
-            if (preg_match('/each\s*\(/', $line)) {
+            // Vérifier each() dépréciée en excluant foreach
+            // Utilise negative lookbehind pour ignorer "foreach"
+            if (preg_match('/(?<!for)each\s*\(/', $line)) {
                 $issues[] = [
                     'severity' => 'error',
                     'message' => 'each() est déprécié depuis PHP 7.2',

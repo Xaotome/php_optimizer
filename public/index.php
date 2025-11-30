@@ -233,7 +233,7 @@ $app->post('/upload', function (Request $request, Response $response) {
     }
 });
 
-$app->post('/analyze', function (Request $request, Response $response) {
+$app->post('/public/analyze', function (Request $request, Response $response) {
     try {
         $controller = new AnalysisController();
         return $controller->analyze($request, $response);

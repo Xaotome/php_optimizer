@@ -155,7 +155,7 @@ class PhpOptimizerApp {
                 formData.append('files[]', file);
             });
 
-            const response = await fetch(this.buildApiUrl('/analyze'), {
+            const response = await fetch(this.buildApiUrl('public/analyze'), {
                 method: 'POST',
                 body: formData,
                 headers: {

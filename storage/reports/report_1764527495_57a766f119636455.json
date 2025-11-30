@@ -7,8 +7,8 @@
     },
     "files": [
         {
-            "name": "init.php",
-            "path": "C:\\wamp64\\www\\php_optimizer\/storage\/uploads\/init_1763231523_1862cd9cfbd3b95f.php",
+            "name": "admin_cleanup.php",
+            "path": "C:\\wamp64\\www\\php_optimizer\/storage\/uploads\/admin_cleanup_1764527495_965a5bdb73bdf94a.php",
             "status": "error",
             "issues": [
                 {
@@ -21,35 +21,21 @@
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 7,
+                    "line": 35,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 9,
+                    "line": 45,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 21,
-                    "rule": "PSR-2.trailing_whitespace",
-                    "suggestion": "Supprimez les espaces en fin de ligne"
-                },
-                {
-                    "severity": "info",
-                    "message": "Espaces en fin de ligne",
-                    "line": 46,
-                    "rule": "PSR-2.trailing_whitespace",
-                    "suggestion": "Supprimez les espaces en fin de ligne"
-                },
-                {
-                    "severity": "info",
-                    "message": "Espaces en fin de ligne",
-                    "line": 51,
+                    "line": 57,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
@@ -70,49 +56,49 @@
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 75,
+                    "line": 80,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
-                    "severity": "warning",
-                    "message": "Ligne trop longue (128 caractères)",
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
                     "line": 82,
-                    "rule": "PSR-2.line_length",
-                    "suggestion": "Divisez la ligne en plusieurs lignes"
-                },
-                {
-                    "severity": "info",
-                    "message": "Espaces en fin de ligne",
-                    "line": 88,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 94,
+                    "line": 92,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 102,
+                    "line": 95,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 111,
+                    "line": 100,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
                 {
                     "severity": "info",
                     "message": "Espaces en fin de ligne",
-                    "line": 114,
+                    "line": 113,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 125,
                     "rule": "PSR-2.trailing_whitespace",
                     "suggestion": "Supprimez les espaces en fin de ligne"
                 },
@@ -124,86 +110,51 @@
                     "suggestion": "Ajoutez une déclaration de namespace"
                 },
                 {
-                    "severity": "error",
-                    "message": "Déclaration strict_types manquante",
-                    "line": 1,
-                    "rule": "PSR-12.declare_strict",
-                    "suggestion": "Ajoutez declare(strict_types=1); après <?php"
-                },
-                {
                     "severity": "info",
                     "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
-                    "line": 105,
+                    "line": 127,
                     "rule": "PHPStan.null_safety",
                     "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
                 },
                 {
                     "severity": "info",
                     "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 132,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 134,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 135,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
                     "line": 108,
-                    "rule": "PHPStan.null_safety",
-                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
-                },
-                {
-                    "severity": "info",
-                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
-                    "line": 117,
-                    "rule": "PHPStan.null_safety",
-                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
-                },
-                {
-                    "severity": "error",
-                    "message": "each() est déprécié depuis PHP 7.2",
-                    "line": 103,
-                    "rule": "PHPStan.deprecated_function",
-                    "suggestion": "Utilisez foreach() ou des alternatives modernes"
-                },
-                {
-                    "severity": "info",
-                    "message": "Utilisation de guillemets doubles sans interpolation",
-                    "line": 8,
                     "rule": "CS-Fixer.single_quote",
                     "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
                 },
                 {
                     "severity": "info",
                     "message": "Utilisation de guillemets doubles sans interpolation",
-                    "line": 112,
+                    "line": 127,
                     "rule": "CS-Fixer.single_quote",
                     "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
-                },
-                {
-                    "severity": "info",
-                    "message": "Utilisation de guillemets doubles sans interpolation",
-                    "line": 113,
-                    "rule": "CS-Fixer.single_quote",
-                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
-                },
-                {
-                    "severity": "info",
-                    "message": "Utilisation de guillemets doubles sans interpolation",
-                    "line": 116,
-                    "rule": "CS-Fixer.single_quote",
-                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
-                },
-                {
-                    "severity": "info",
-                    "message": "Utilisation de guillemets doubles sans interpolation",
-                    "line": 118,
-                    "rule": "CS-Fixer.single_quote",
-                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
-                },
-                {
-                    "severity": "warning",
-                    "message": "Ligne trop longue (128 caractères)",
-                    "line": 82,
-                    "rule": "CodeSniffer.PSR12.line_length",
-                    "suggestion": "Limitez les lignes à 120 caractères maximum"
                 },
                 {
                     "severity": "info",
                     "message": "Considérez utiliser les arguments nommés pour plus de clarté",
-                    "line": 82,
+                    "line": 12,
                     "rule": "PHP-8.4.named_arguments",
                     "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
                     "category": "migration",
@@ -216,7 +167,7 @@
                 {
                     "severity": "info",
                     "message": "Considérez utiliser les arguments nommés pour plus de clarté",
-                    "line": 89,
+                    "line": 13,
                     "rule": "PHP-8.4.named_arguments",
                     "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
                     "category": "migration",
@@ -229,7 +180,7 @@
                 {
                     "severity": "info",
                     "message": "Considérez utiliser les arguments nommés pour plus de clarté",
-                    "line": 97,
+                    "line": 98,
                     "rule": "PHP-8.4.named_arguments",
                     "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
                     "category": "migration",
@@ -249,7 +200,7 @@
                 {
                     "standard": "PSR-2",
                     "compliant": false,
-                    "issues_count": 14
+                    "issues_count": 12
                 },
                 {
                     "standard": "PSR-4",
@@ -258,8 +209,8 @@
                 },
                 {
                     "standard": "PSR-12",
-                    "compliant": false,
-                    "issues_count": 1
+                    "compliant": true,
+                    "issues_count": 0
                 }
             ],
             "migration_summary": {
@@ -273,10 +224,10 @@
                 "complexity": "low"
             },
             "metrics": {
-                "total_issues": 30,
-                "errors": 3,
-                "warnings": 3,
-                "info": 24,
+                "total_issues": 23,
+                "errors": 1,
+                "warnings": 1,
+                "info": 21,
                 "migration_suggestions": 3
             }
         }

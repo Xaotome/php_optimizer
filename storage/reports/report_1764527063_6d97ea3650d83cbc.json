@@ -1,0 +1,249 @@
+{
+    "summary": {
+        "compliant": 0,
+        "warnings": 0,
+        "errors": 1,
+        "total_files": 1
+    },
+    "files": [
+        {
+            "name": "admin_cleanup.php",
+            "path": "C:\\wamp64\\www\\php_optimizer\/storage\/uploads\/admin_cleanup_1764527063_fbcad4f0e65e1e27.php",
+            "status": "error",
+            "issues": [
+                {
+                    "severity": "warning",
+                    "message": "Possible effet de bord détecté (output)",
+                    "line": 1,
+                    "rule": "PSR-1.side_effects",
+                    "suggestion": "Évitez les sorties directes dans les fichiers de classe"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 35,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 45,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 57,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 67,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 70,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 80,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 82,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 92,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 95,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 100,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 113,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Espaces en fin de ligne",
+                    "line": 125,
+                    "rule": "PSR-2.trailing_whitespace",
+                    "suggestion": "Supprimez les espaces en fin de ligne"
+                },
+                {
+                    "severity": "error",
+                    "message": "Déclaration de namespace manquante",
+                    "line": 1,
+                    "rule": "PSR-4.namespace",
+                    "suggestion": "Ajoutez une déclaration de namespace"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 127,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 132,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 134,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "info",
+                    "message": "Appel de méthode détecté - vérifiez que l'objet n'est pas null",
+                    "line": 135,
+                    "rule": "PHPStan.null_safety",
+                    "suggestion": "Ajoutez une vérification null avant l'appel de méthode"
+                },
+                {
+                    "severity": "error",
+                    "message": "each() est déprécié depuis PHP 7.2",
+                    "line": 103,
+                    "rule": "PHPStan.deprecated_function",
+                    "suggestion": "Utilisez foreach() ou des alternatives modernes"
+                },
+                {
+                    "severity": "warning",
+                    "message": "Utilisation de array() au lieu de la syntaxe courte []",
+                    "line": 71,
+                    "rule": "CS-Fixer.array_syntax",
+                    "suggestion": "Remplacez array() par [] pour une syntaxe plus moderne"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 108,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Utilisation de guillemets doubles sans interpolation",
+                    "line": 127,
+                    "rule": "CS-Fixer.single_quote",
+                    "suggestion": "Utilisez des guillemets simples quand il n'y a pas d'interpolation"
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 12,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 13,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                },
+                {
+                    "severity": "info",
+                    "message": "Considérez utiliser les arguments nommés pour plus de clarté",
+                    "line": 98,
+                    "rule": "PHP-8.4.named_arguments",
+                    "suggestion": "PHP 8.0+ : Arguments nommés améliorent la lisibilité",
+                    "category": "migration",
+                    "php_version": "8.4",
+                    "diff": null,
+                    "before_code": "createUser('John', 'Doe', 25, true, false)",
+                    "after_code": "createUser(\n    firstName: 'John',\n    lastName: 'Doe',\n    age: 25,\n    isActive: true,\n    isAdmin: false\n)",
+                    "explanation": "Les arguments nommés permettent de passer les paramètres dans n'importe quel ordre, d'omettre les paramètres optionnels, et rendent le code plus lisible."
+                }
+            ],
+            "psr_compliance": [
+                {
+                    "standard": "PSR-1",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-2",
+                    "compliant": false,
+                    "issues_count": 12
+                },
+                {
+                    "standard": "PSR-4",
+                    "compliant": false,
+                    "issues_count": 1
+                },
+                {
+                    "standard": "PSR-12",
+                    "compliant": true,
+                    "issues_count": 0
+                }
+            ],
+            "migration_summary": {
+                "total_suggestions": 3,
+                "by_category": {
+                    "migration": 3
+                },
+                "php_versions": {
+                    "8.4": 3
+                },
+                "complexity": "low"
+            },
+            "metrics": {
+                "total_issues": 25,
+                "errors": 2,
+                "warnings": 2,
+                "info": 21,
+                "migration_suggestions": 3
+            }
+        }
+    ]
+}

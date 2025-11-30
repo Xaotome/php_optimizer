@@ -71,13 +71,26 @@ class CsFixerAnalyzer
             }
 
             // Vérifier l'utilisation de array() au lieu de []
-            if (preg_match('/array\s*\(/', $line)) {
+            // Utilise \b pour word boundary afin d'exclure in_array(), array_map(), etc.
+            if (preg_match('/\barray\s*\(/', $line)) {
                 $issues[] = [
                     'severity' => 'warning',
                     'message' => 'Utilisation de array() au lieu de la syntaxe courte []',
                     'line' => $actualLineNumber,
                     'rule' => 'CS-Fixer.array_syntax',
                     'suggestion' => 'Remplacez array() par [] pour une syntaxe plus moderne'
+                ];
+            }
+
+            // Vérifier l'utilisation de each() dépréciée (PHP 7.2+)
+            // Exclut foreach avec negative lookbehind
+            if (preg_match('/(?<!for)each\s*\(/', $line)) {
+                $issues[] = [
+                    'severity' => 'error',
+                    'message' => 'La fonction each() est dépréciée depuis PHP 7.2',
+                    'line' => $actualLineNumber,
+                    'rule' => 'CS-Fixer.deprecated_each',
+                    'suggestion' => 'Remplacez each() par foreach ou utilisez key()/current()/next()'
                 ];
             }
 
