@@ -123,4 +123,38 @@ class User
         $result = $this->db->queryOne($sql);
         return (int) ($result['total'] ?? 0);
     }
+
+    /**
+     * Supprimer définitivement un utilisateur (RGPD compliant)
+     * Supprime toutes les données associées : abonnements, factures, stats, sessions
+     */
+    public function delete(int $userId): bool
+    {
+        try {
+            $this->db->beginTransaction();
+
+            // 1. Supprimer les sessions
+            $this->db->execute("DELETE FROM sessions WHERE user_id = ?", [$userId]);
+
+            // 2. Supprimer les factures
+            $this->db->execute("DELETE FROM invoices WHERE user_id = ?", [$userId]);
+
+            // 3. Supprimer les statistiques d'utilisation
+            $this->db->execute("DELETE FROM usage_stats WHERE user_id = ?", [$userId]);
+
+            // 4. Supprimer les abonnements
+            $this->db->execute("DELETE FROM subscriptions WHERE user_id = ?", [$userId]);
+
+            // 5. Supprimer l'utilisateur
+            $this->db->execute("DELETE FROM users WHERE id = ?", [$userId]);
+
+            $this->db->commit();
+            return true;
+
+        } catch (\PDOException $e) {
+            $this->db->rollback();
+            error_log("User Deletion Error: " . $e->getMessage());
+            return false;
+        }
+    }
 }

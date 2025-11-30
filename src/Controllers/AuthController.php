@@ -168,6 +168,53 @@ class AuthController
     }
 
     /**
+     * Supprimer définitivement le compte utilisateur (RGPD)
+     * POST /api/account/delete
+     */
+    public function deleteAccount(Request $request, Response $response): Response
+    {
+        try {
+            $data = json_decode($request->getBody()->getContents(), true);
+
+            $email = $data['email'] ?? '';
+            $password = $data['password'] ?? '';
+            $reason = $data['reason'] ?? null;
+
+            // Validation
+            if (empty($email) || empty($password)) {
+                return $this->jsonResponse($response, [
+                    'success' => false,
+                    'message' => 'Email et mot de passe requis'
+                ], 400);
+            }
+
+            // Vérifier les identifiants
+            $result = $this->authService->deleteAccount($email, $password, $reason);
+
+            if (!$result['success']) {
+                return $this->jsonResponse($response, [
+                    'success' => false,
+                    'message' => $result['message']
+                ], 401);
+            }
+
+            // Déconnecter l'utilisateur après suppression
+            $this->authService->logout();
+
+            return $this->jsonResponse($response, [
+                'success' => true,
+                'message' => 'Votre compte a été définitivement supprimé (RGPD compliant)'
+            ]);
+
+        } catch (\Exception $e) {
+            return $this->jsonResponse($response, ResponseModel::error(
+                'DELETE_ACCOUNT_ERROR',
+                'Erreur lors de la suppression du compte: ' . $e->getMessage()
+            ), 500);
+        }
+    }
+
+    /**
      * Helper pour retourner une réponse JSON
      */
     private function jsonResponse(Response $response, array $data, int $status = 200): Response

@@ -156,6 +156,20 @@ $app->get('/api/auth/check', function (Request $request, Response $response) {
     }
 });
 
+$app->post('/api/account/delete', function (Request $request, Response $response) {
+    try {
+        $controller = new AuthController();
+        return $controller->deleteAccount($request, $response);
+    } catch (Exception $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'error_code' => 'DELETE_ACCOUNT_ERROR',
+            'message' => 'Erreur: ' . $e->getMessage()
+        ]));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+    }
+});
+
 // ========================================
 // Routes d'abonnement (Stripe)
 // ========================================

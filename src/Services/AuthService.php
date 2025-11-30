@@ -228,4 +228,53 @@ class AuthService
             exit;
         }
     }
+
+    /**
+     * Supprimer définitivement le compte utilisateur (RGPD compliant)
+     */
+    public function deleteAccount(string $email, string $password, ?string $reason = null): array
+    {
+        // Vérifier les identifiants
+        $user = $this->userModel->verify($email, $password);
+
+        if (!$user) {
+            return [
+                'success' => false,
+                'message' => 'Email ou mot de passe incorrect'
+            ];
+        }
+
+        // Récupérer l'utilisateur complet pour avoir l'ID
+        $fullUser = $this->userModel->findByEmail($email);
+        if (!$fullUser) {
+            return [
+                'success' => false,
+                'message' => 'Utilisateur introuvable'
+            ];
+        }
+
+        $userId = (int) $fullUser['id'];
+
+        // Logger la raison si fournie (pour amélioration du service)
+        if ($reason) {
+            error_log("Account deletion - User ID: {$userId}, Reason: {$reason}");
+        }
+
+        // Supprimer le compte et toutes les données associées
+        $deleted = $this->userModel->delete($userId);
+
+        if (!$deleted) {
+            return [
+                'success' => false,
+                'message' => 'Erreur lors de la suppression du compte'
+            ];
+        }
+
+        error_log("Account deleted successfully - User ID: {$userId}, Email: {$email}");
+
+        return [
+            'success' => true,
+            'message' => 'Compte supprimé avec succès'
+        ];
+    }
 }

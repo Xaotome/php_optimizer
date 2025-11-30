@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales de Vente - PHP Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f35 50%, #0f1520 100%);
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: rgba(26, 31, 53, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0e27;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #8b5cf6 0%, #22d3ee 100%);
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #8b5cf6;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #22d3ee;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-200">
+    <!-- Header -->
+    <nav class="border-b border-purple-500/20 bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-code text-purple-500 text-2xl"></i>
+                    <span class="text-xl font-bold gradient-text">PHP Optimizer</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="./home.html" class="text-gray-300 hover:text-purple-400 transition">Accueil</a>
+                    <a href="./login.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition">
+                        Connexion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <div class="glass-card rounded-xl p-8 mb-8">
+            <h1 class="text-4xl font-bold gradient-text mb-6">Conditions Générales de Vente</h1>
+            <p class="text-gray-400 text-sm mb-4">Dernière mise à jour : <?php echo date('d/m/Y'); ?></p>
+
+            <div class="space-y-6 text-gray-300 leading-relaxed">
+                <h2 class="text-2xl font-semibold">1. Informations légales</h2>
+                <p>
+                    <strong>Dénomination :</strong> PHP Optimizer<br>
+                    <strong>Siège social :</strong> Belgique<br>
+                    <strong>Forme juridique :</strong> Service SaaS (Software as a Service)<br>
+                    <strong>Email de contact :</strong> support@php-optimizer.be
+                </p>
+
+                <h2 class="text-2xl font-semibold">2. Objet</h2>
+                <p>
+                    Les présentes Conditions Générales de Vente (CGV) régissent la vente d'abonnements au service PHP Optimizer,
+                    un outil d'analyse et d'optimisation de code PHP, accessible via le site web et proposant des fonctionnalités
+                    d'analyse de code selon les standards PSR et PHP 8.4.
+                </p>
+
+                <h2 class="text-2xl font-semibold">3. Offres et tarifs</h2>
+
+                <h3 class="text-xl font-semibold">3.1 Plans disponibles</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Plan Free :</strong> Gratuit - 20 fichiers analysés par mois</li>
+                    <li><strong>Plan Pro :</strong> 5,00 € HT/mois - Analyses illimitées</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">3.2 Prix</h3>
+                <p>
+                    Les prix sont affichés en euros (EUR), hors taxes (HT). La TVA belge applicable (21%) sera ajoutée
+                    conformément à la législation en vigueur pour les clients belges. Les prix peuvent être modifiés à
+                    tout moment, mais les changements n'affecteront pas les abonnements en cours.
+                </p>
+
+                <h2 class="text-2xl font-semibold">4. Processus de commande et paiement</h2>
+
+                <h3 class="text-xl font-semibold">4.1 Inscription</h3>
+                <p>
+                    L'inscription au service nécessite la création d'un compte utilisateur avec une adresse email valide
+                    et un mot de passe sécurisé. Le plan Free est automatiquement activé lors de l'inscription.
+                </p>
+
+                <h3 class="text-xl font-semibold">4.2 Souscription à un abonnement payant</h3>
+                <p>
+                    Les paiements sont traités de manière sécurisée via <strong>Stripe</strong>, notre prestataire de
+                    paiement certifié PCI-DSS. PHP Optimizer ne stocke aucune donnée bancaire. Modes de paiement acceptés :
+                </p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Cartes bancaires (Visa, Mastercard, American Express)</li>
+                    <li>Cartes de débit</li>
+                    <li>Autres méthodes supportées par Stripe selon votre région</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">4.3 Facturation récurrente</h3>
+                <p>
+                    Les abonnements Pro sont facturés mensuellement de manière automatique. Le renouvellement se fait
+                    automatiquement chaque mois à la date d'anniversaire de souscription, sauf annulation préalable.
+                </p>
+
+                <h2 class="text-2xl font-semibold">5. Droit de rétractation (Consommateurs belges)</h2>
+                <p>
+                    Conformément à la loi belge sur la protection du consommateur (Code de droit économique, Livre VI),
+                    vous disposez d'un <strong>délai de rétractation de 14 jours</strong> à compter de la souscription
+                    de l'abonnement Pro.
+                </p>
+                <p>
+                    Pour exercer votre droit de rétractation, vous devez nous notifier votre décision par email à
+                    <a href="mailto:support@php-optimizer.be" class="text-purple-400 hover:underline">support@php-optimizer.be</a>.
+                </p>
+                <p>
+                    <strong>Important :</strong> Si vous commencez à utiliser le service pendant la période de rétractation,
+                    vous renoncez expressément à ce droit conformément à l'article VI.53, 13° du Code de droit économique.
+                </p>
+
+                <h2 class="text-2xl font-semibold">6. Durée et résiliation</h2>
+
+                <h3 class="text-xl font-semibold">6.1 Durée</h3>
+                <p>
+                    Les abonnements sont souscrits pour une durée indéterminée avec renouvellement mensuel automatique.
+                </p>
+
+                <h3 class="text-xl font-semibold">6.2 Résiliation par le client</h3>
+                <p>
+                    Vous pouvez annuler votre abonnement à tout moment via :
+                </p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Votre tableau de bord utilisateur (section "Abonnement")</li>
+                    <li>Le portail client Stripe accessible depuis votre compte</li>
+                    <li>Par email à support@php-optimizer.be</li>
+                </ul>
+                <p>
+                    L'annulation prend effet à la fin de la période de facturation en cours. Aucun remboursement au
+                    prorata ne sera effectué pour le mois en cours.
+                </p>
+
+                <h3 class="text-xl font-semibold">6.3 Résiliation par PHP Optimizer</h3>
+                <p>
+                    Nous nous réservons le droit de suspendre ou résilier un compte en cas de :
+                </p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Violation des présentes CGV</li>
+                    <li>Utilisation frauduleuse ou abusive du service</li>
+                    <li>Non-paiement des sommes dues</li>
+                    <li>Activités illégales ou contraires à nos Conditions d'Utilisation</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold">7. Données personnelles (RGPD)</h2>
+                <p>
+                    Conformément au <strong>Règlement Général sur la Protection des Données (RGPD)</strong> et à la loi
+                    belge du 30 juillet 2018, vos données personnelles sont collectées et traitées avec votre consentement.
+                </p>
+
+                <h3 class="text-xl font-semibold">7.1 Données collectées</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Informations de compte : email, nom, mot de passe (chiffré)</li>
+                    <li>Données de facturation : traitées par Stripe (ID client Stripe uniquement stocké)</li>
+                    <li>Statistiques d'utilisation : nombre de fichiers analysés, dates d'analyse</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">7.2 Utilisation des données</h3>
+                <p>Vos données sont utilisées exclusivement pour :</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>La gestion de votre compte et de votre abonnement</li>
+                    <li>Le traitement des paiements via Stripe</li>
+                    <li>L'application des quotas d'utilisation</li>
+                    <li>L'envoi de notifications importantes concernant le service</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">7.3 Sécurité et confidentialité</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Fichiers analysés :</strong> Supprimés automatiquement après analyse (conformité RGPD)</li>
+                    <li><strong>Code source :</strong> Jamais stocké de manière permanente</li>
+                    <li><strong>Mots de passe :</strong> Chiffrés avec bcrypt</li>
+                    <li><strong>Données bancaires :</strong> Jamais stockées (gérées par Stripe)</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">7.4 Vos droits</h3>
+                <p>Vous disposez des droits suivants :</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Droit d'accès :</strong> Consulter vos données personnelles</li>
+                    <li><strong>Droit de rectification :</strong> Modifier vos informations</li>
+                    <li><strong>Droit à l'effacement :</strong> Supprimer votre compte et données associées</li>
+                    <li><strong>Droit à la portabilité :</strong> Récupérer vos données dans un format structuré</li>
+                    <li><strong>Droit d'opposition :</strong> Refuser certains traitements de données</li>
+                </ul>
+                <p>
+                    Pour exercer ces droits, contactez-nous à
+                    <a href="mailto:support@php-optimizer.be" class="text-purple-400 hover:underline">support@php-optimizer.be</a>
+                    ou utilisez notre <a href="./delete-account.html" class="text-purple-400 hover:underline">formulaire de suppression de compte</a>.
+                </p>
+
+                <h2 class="text-2xl font-semibold">8. Propriété intellectuelle</h2>
+                <p>
+                    Le service PHP Optimizer, son code source, son design, ses logos et tous les éléments qui le composent
+                    sont protégés par le droit d'auteur et restent la propriété exclusive de PHP Optimizer.
+                </p>
+                <p>
+                    L'abonnement vous accorde un droit d'utilisation personnel et non exclusif du service. Toute reproduction,
+                    représentation, modification ou exploitation non autorisée est strictement interdite.
+                </p>
+
+                <h2 class="text-2xl font-semibold">9. Limitation de responsabilité</h2>
+                <p>
+                    Le service PHP Optimizer est fourni "en l'état". Nous nous efforçons d'assurer la disponibilité et
+                    la qualité du service, mais ne garantissons pas :
+                </p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Une disponibilité ininterrompue (maintenances, pannes techniques possibles)</li>
+                    <li>L'exactitude absolue des analyses (outils basés sur des analyseurs tiers)</li>
+                    <li>L'absence totale d'erreurs ou de bugs</li>
+                </ul>
+                <p>
+                    Notre responsabilité est limitée au montant des sommes effectivement payées par l'utilisateur au
+                    cours des 12 derniers mois. Nous ne saurions être tenus responsables des dommages indirects.
+                </p>
+
+                <h2 class="text-2xl font-semibold">10. Force majeure</h2>
+                <p>
+                    Nous ne pourrons être tenus responsables en cas de non-exécution ou retard dans l'exécution de nos
+                    obligations dues à un événement de force majeure (catastrophe naturelle, cyberattaque, panne de serveur, etc.).
+                </p>
+
+                <h2 class="text-2xl font-semibold">11. Modification des CGV</h2>
+                <p>
+                    Nous nous réservons le droit de modifier les présentes CGV à tout moment. Les utilisateurs seront
+                    informés par email des modifications importantes au moins 30 jours avant leur entrée en vigueur.
+                </p>
+                <p>
+                    La poursuite de l'utilisation du service après notification vaut acceptation des nouvelles conditions.
+                </p>
+
+                <h2 class="text-2xl font-semibold">12. Loi applicable et juridiction</h2>
+                <p>
+                    Les présentes CGV sont régies par le <strong>droit belge</strong>.
+                </p>
+                <p>
+                    En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux de
+                    <strong>Bruxelles (Belgique)</strong> seront seuls compétents.
+                </p>
+                <p>
+                    Conformément à la réglementation européenne, les consommateurs peuvent également recourir à la
+                    plateforme de règlement en ligne des litiges (RLL) :
+                    <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-purple-400 hover:underline">
+                        https://ec.europa.eu/consumers/odr
+                    </a>
+                </p>
+
+                <h2 class="text-2xl font-semibold">13. Contact</h2>
+                <p>
+                    Pour toute question concernant ces CGV, contactez-nous :
+                </p>
+                <ul class="list-none space-y-2 ml-4">
+                    <li><i class="fas fa-envelope text-purple-400 mr-2"></i>Email :
+                        <a href="mailto:support@php-optimizer.be" class="text-purple-400 hover:underline">support@php-optimizer.be</a>
+                    </li>
+                    <li><i class="fas fa-globe text-purple-400 mr-2"></i>Site web :
+                        <a href="./home.html" class="text-purple-400 hover:underline">PHP Optimizer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20 bg-slate-900/50 backdrop-blur-lg mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Section 1 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-3">PHP Optimizer</h3>
+                    <p class="text-gray-400 text-sm">
+                        Analysez et optimisez votre code PHP selon les standards PSR et PHP 8.4.
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-3">Liens utiles</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./home.html" class="text-gray-400 hover:text-purple-400 transition">Accueil</a></li>
+                        <li><a href="./pricing.html" class="text-gray-400 hover:text-purple-400 transition">Tarifs</a></li>
+                        <li><a href="./analyzer.html" class="text-gray-400 hover:text-purple-400 transition">Analyser</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-3">Légal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./terms.html" class="text-gray-400 hover:text-purple-400 transition">Conditions de vente</a></li>
+                        <li><a href="./delete-account.html" class="text-gray-400 hover:text-purple-400 transition">Supprimer mon compte</a></li>
+                        <li><a href="mailto:support@php-optimizer.be" class="text-gray-400 hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-purple-500/20 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 PHP Optimizer - Tous droits réservés | Belgique</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
